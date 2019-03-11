@@ -1,0 +1,1570 @@
+Received: from [106.249.24.36] (HELO drmapp-fil905.dooray.com)
+ ([106.249.24.36]) by nhnent.dev.dooray.com with SMTP id 3385183d5ab20045;
+ Wed, 21 Mar 2018 15:48:37 +0900
+Received-SPF: Pass 
+	client-ip="209.85.223.169" envelope-from="jibum.jung+caf_=jibum.jung.0=comt.in@gmail.com" 
+Received: from [209.85.223.169] ([209.85.223.169]) 
+          by drmapp-fil905.dooray.com ([43.227.118.191]) 
+          with ESMTP id 1521614916.54590.140631483139840.drmapp-fil905
+          for <jibum.jung.0@comt.in>; 
+          Wed, 21 Mar 2018 15:48:36 +0900 (KST) 
+Received: by mail-io0-f169.google.com with SMTP id l12so5342127ioc.10
+        for <jibum.jung.0@comt.in>; Tue, 20 Mar 2018 23:48:36 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:delivered-to:dkim-signature:date:from:to:subject
+         :mime-version:list-unsubscribe:feedback-id:precedence:message-id;
+        bh=RmemoQcN4adx98K5p3S2qPVTKD8sV22JjSO3I4CGERM=;
+        b=OxrM9BwbwqZeQYoFSyvSG/c/rFJJWc+F2bLsLRBgSaMDwrqupZomaiPGb+8fJAZ20Z
+         lzxnRlMoB08I9/WNdeMnol20gbEv3ERFgXPo9v0CuwEfbFg8K2Llm099CQGUL0bwXN5x
+         1/gjo+GMV9a5aWROlHrR943FZT4S5JNb6nfxuInIiAkFNBzw7lJfPCuTOkRePYDR2bH+
+         Z2WyV6JISEcnN1xXjvP64NmS3wohPldaeX6VQ2590UPsByiEwMU46SfaeQ2qS+9gIFFy
+         /S3S4IfaLrNnn/HsiF+ESgccIaBpdxfnukFMKI5abvGCRNUkNpk3rbGedUqAWMsBjgcp
+         vMvg==
+X-Gm-Message-State: AElRT7ER7BmkMZ5PbvX5JYV6OmMS+H8HYyc5f9ITPVo0M/855koN+YUI
+	zgP6tPe+cgEihFaiwHEJiIZ6HkYHiqLsSbkn4TC6HsoTCKzxJiY=
+X-Received: by 10.107.151.146 with SMTP id z140mr14044339iod.237.1521614915244;
+        Tue, 20 Mar 2018 23:48:35 -0700 (PDT)
+X-Forwarded-To: jibum.jung.0@comt.in
+X-Forwarded-For: jibum.jung@gmail.com jibum.jung.0@comt.in
+Delivered-To: jibum.jung@gmail.com
+Received: by 10.107.35.135 with SMTP id j129csp4771436ioj;
+        Tue, 20 Mar 2018 23:48:33 -0700 (PDT)
+X-Google-Smtp-Source: AG47ELupD5Yw74P5xUWkdMnYlZ95ZythlUrVK9oYw43f3F4DYO9sHShJZ1EmdIrNBl38/SbMqfI2
+X-Received: by 2002:a17:902:d807:: with SMTP id a7-v6mr19641254plz.218.1521614913477;
+        Tue, 20 Mar 2018 23:48:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1521614913; cv=none;
+        d=google.com; s=arc-20160816;
+        b=NIDLij2knmgrYpLZu4szrFidKM3mmByDPMmk7CW/ug1/S2voMM/r1uuN+wG1k2GXh2
+         rfX10KsVx+K3zn7ydxQo8vq5Zq8oM4IjQJSMxDK5n3nsI8feCPOT85gSrZYJh4cz5jZw
+         zjEYKRoRruNr4s0LwPGYDAL1wTEmI3IOkKJYyIqL/jJwS9Il4jA/EPgHA0s3o0tt8WhG
+         uvxJdJ6THUpDZA8HOWkxGf/+ZwC9BIs50+ka1jGT+8FkjJ0P1Db+r848h4B1dxf0wd7N
+         CaYrlZYNpDAq66jVotI9+Tv2N4dWlhck/ELYTh2BcX2ZDMsiiIeke0f5gi/34dkd6eR+
+         XOFg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:precedence:feedback-id:list-unsubscribe:mime-version
+         :subject:to:from:date:dkim-signature:arc-authentication-results;
+        bh=RmemoQcN4adx98K5p3S2qPVTKD8sV22JjSO3I4CGERM=;
+        b=zm2dwGVS1pwpKh6CaS2rrjF2hIDm104r/VQcvQBw16PcckAklgperIbeFzf7vQic3E
+         7pFJQUtr9GvCwvXl2h56J2aSs3zYoFxnlZluIcmkR+Ts1jzkua0KTX2eSFKaGldaeQxd
+         vtm5K+D2easbZVachVdGe3ZMbcrWi7nJGly6TBnPFbB4NMLfBGhnRnr7pUT7JHoqr/Be
+         KEkDcApR1U5U8QuESzDBnIGH1EjMG99k74UcXA8sGywTWTQ/eLINwLv5t0c6iSdDRgdd
+         rDRLiNcPIsWa+E7y9gQJXeGmNUJqdzQX6PCPpnCSM8l3D098n8F92vcrKTeZdCSKHQ39
+         ZOdA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@twitter.com header.s=dkim-201406 header.b=K8F6XQNg;
+       spf=pass (google.com: domain of n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com designates 199.59.150.99 as permitted sender) smtp.mailfrom=n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=twitter.com
+Return-Path: <n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com>
+Received: from spruce-goose-bd.twitter.com (spruce-goose-bd.twitter.com. [199.59.150.99])
+        by mx.google.com with ESMTPS id b8-v6si3676546plm.590.2018.03.20.23.48.33
+        for <jibum.jung@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Mar 2018 23:48:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com designates 199.59.150.99 as permitted sender) client-ip=199.59.150.99;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@twitter.com header.s=dkim-201406 header.b=K8F6XQNg;
+       spf=pass (google.com: domain of n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com designates 199.59.150.99 as permitted sender) smtp.mailfrom=n061193b066-b9b0584c20ee444fa736b4d6776c9ad5-jibum.jung===gmail.com@bounce.twitter.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=twitter.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=twitter.com;
+	s=dkim-201406; t=1521614911;
+	bh=RmemoQcN4adx98K5p3S2qPVTKD8sV22JjSO3I4CGERM=;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:
+	 Message-ID;
+	b=K8F6XQNg0q6ZHYBe3F/yUn1rx3jwWcSyhRPtsk0NIdn26KBYJfRQ/7QjSNOiVBjJF
+	 kuyP3fM+fnuY7v//lYi3/InPOyF9+3oe6sPkaqvETUM6h0r6DKFeK9gBHyToFWEIyt
+	 J6wZHSbY/XP+hdgABgY+VNyoeYicdAUOZ/ydrCAbHJVmWqeCqljVohtK4o+ggLqfnB
+	 NDHpqPvJd1/ynObreYm3GOvZ33YB2HAdy0aLepGuOITN3urq4LcxHeRL6qDKuE2V5k
+	 0dDwwO+7jw9zCNkkjkc1rPH5GMFBWUNslYzfwGKjrQydn6fCdC4u6AFZONwquIpv7d
+	 YixLXWGfh2Vog==
+X-MSFBL: xlJ02w+jw9ghgbOMbmoI1bNXqy9KK+ONeuwDim0j8bM=|eyJ1IjoiamlidW0uanV
+	uZ0BnbWFpbC5jb21AaWlkIyNiOWIwNTg0YzIwZWU0NDRmYTczNmI0ZDY3NzZjOWF
+	kNUB1c2IjIzI0QDI0NEA0ODYwNzg0OEAwQDJkODgxNzhiYjA3NmY2N2Y1ZmEzOTc
+	yYjY5MjJjZmQ2NjFiYWEwMTQiLCJyIjoiamlidW0uanVuZ0BnbWFpbC5jb20iLCJ
+	nIjoiQnVsayIsImIiOiJzbWYxLWZjYS0zMC1zcjEtQnVsay4xODkifQ==
+Date: Wed, 21 Mar 2018 06:48:31 +0000
+From: =?UTF-8?B?7Yq47JyE7YSw?= <info@twitter.com>
+To: =?UTF-8?B?66eM7Yuw?= <jibum.jung@gmail.com>
+Subject: =?UTF-8?Q?=EA=B4=91=ED=8C=8C=EB=A6=AC=5FIT?=
+ =?UTF-8?Q?_=EC=9D=B4=EC=95=BC=EA=B8=B0_=EB=8B=98=EC=9D=B4?=
+ =?UTF-8?Q?_=EA=B3=B5=EC=9C=A0:_"[=EA=B5=AD=EC=A0=9C]=ED=83=9C=EA=B5=AD,?=
+ =?UTF-8?Q?_=E4=B8=AD_BYD_=EA=B3=A0=EA=B8=89_=ED=83=9D=EC=8B=9C=EC=9A=A9?=
+ =?UTF-8?Q?_=EC=A0=84=EA=B8=B0=EC=B0=A8_1000=EB=8C=80_=EB=8F=84=EC=9E=85"?=
+X-TERRACE-DUMMYSUBJECT: Terrace Spam system                                  *
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_38348435_2112799858.1521614911912"
+List-Unsubscribe: <https://twitter.com/i/u?t=1&listunsub=t&cn=ZmxleGlibGVfcmVjcw%3D%3D&sig=475a81d04430053c5e2b49d43f2e794a67f70a7a&iid=b9b0584c20ee444fa736b4d6776c9ad5&uid=48607848&nid=244+26&usbid=9>
+Feedback-ID: 0040162518f58f41d1f0:15491f3b2ee48656f8e7fb2fac:none:twitterESP
+Precedence: Bulk
+Message-ID: <57.8E.25512.F3002BA5@twitter.com>
+X-TERRACE-SPAMMARK: NOT spam-marked.                              
+  (by Terrace)                                            
+X-TERRACE-PEERIP: 209.85.223.169
+X-TERRACE-SID: 1521614916.54590.140631483139840.drmapp-fil905
+X-TERRACE-CLASSID: Terrace Spam system                                      
+Authentication-Results: mx.dooray.com;
+		spf=Pass clientip=209.85.223.169 envelop.from=@gmail.com;
+		dmarc=pass
+
+------=_Part_38348435_2112799858.1521614911912
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+@jibjung =EB=8B=98, =EC=84=B8=EA=B3=84 =EA=B3=B3=EA=B3=B3=EC=97=90=EC=84=9C=
+ =EB=AC=B4=EC=8A=A8 =EC=9D=BC=EC=9D=B4 =EC=9D=BC=EC=96=B4=EB=82=98=EA=B3=A0=
+ =EC=9E=88=EB=8A=94=EC=A7=80 =EC=95=8C=EC=95=84=EB=B3=B4=EC=84=B8=EC=9A=94
+
+
+
+  =EC=88=98=EC=8B=A0=EA=B1=B0=EB=B6=80: https://twitter.com/i/u?t=3D1&cn=3D=
+ZmxleGlibGVfcmVjcw%3D%3D&sig=3D67951d807bce87ff11c85052e310cf8659df93cb&iid=
+=3Db9b0584c20ee444fa736b4d6776c9ad5&uid=3D48607848&nid=3D244+26&usbid=3D9
+------=_Part_38348435_2112799858.1521614911912
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, minimum-scale=3D1.=
+0, maximum-scale=3D1.0, user-scalable=3D0" />
+<meta name=3D"apple-mobile-web-app-capable" content=3D"yes" />
+<style type=3D"text/css">
+@media only screen and (max-width: 400px) {
+.hide {
+display: none !important;
+}
+
+.show {
+overflow: visible !important;
+float: none !important;
+display: table !important;
+line-height: 100% !important;
+width: 100% !important;
+margin: 0 auto !important;
+}
+
+.wrapper {
+width: 100% !important;
+min-width: 100vw !important;
+}
+
+.player {
+width: 100% !important;
+}
+
+.width_full {
+width: 100% !important;
+}
+
+.width_zero {
+width: 0px !important;
+}
+
+.full_tweet_margin_lr {
+width: 12px !important;
+}
+
+.full_tweet_margin_tb {
+height: 12px !important;
+}
+
+.social_proof_margin_lr {
+width: 12px !important;
+}
+
+.button-width-full {
+width: 86% !important;
+min-width: 86% !important;
+display: block !important;
+}
+
+.module_margin_tb {
+height: 12px !important;
+}
+
+.module_margin_lr {
+width: 12px !important;
+min-width: 12px !important;
+}
+
+.tweet_main_left {
+display: table !important;
+width: 100% !important;
+}
+
+.tweet_main_right {
+display: table !important;
+width: 100% !important;
+vertical-align: top !important;
+vertical-align: middle;
+border-radius: 0px 0px 4px 4px !important;
+}
+
+.image_full {
+width: 100% !important;
+height: auto !important;
+}
+
+.image_half {
+width: 100% !important;
+height: auto !important;
+}
+
+.image_two_third {
+width: 100% !important;
+height: auto !important;
+}
+
+.image_third {
+width: 100% !important;
+height: auto !important;
+}
+
+.td_image_two_third {
+width: 66% !important;
+}
+
+.td_image_third {
+width: 33% !important;
+}
+
+.image_num_bg {
+width: 100%  !important;
+height: auto !important;
+}
+
+.header.updates {
+font-size: 24px !important;
+line-height: 28px !important;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.hide {
+display: none !important;
+}
+.show {
+overflow: visible !important;
+float: none !important;
+display: table !important;
+line-height: 100% !important;
+}
+.show_500 {
+overflow: visible !important;
+float: none !important;
+display: table !important;
+line-height: 100% !important;
+}
+.trends_user_handle {
+max-width: 200px !important;
+}
+}
+
+@media only screen and (max-width: 350px) {
+.hide {
+display: none !important;
+}
+.show {
+overflow: visible !important;
+float: none !important;
+display: table !important;
+line-height: 100% !important;
+}
+.show_500 {
+display: none !important;
+}
+.show_350 {
+overflow: visible !important;
+float: none !important;
+display: table !important;
+line-height: 100% !important;
+}
+.trends_user_handle {
+max-width: 150px !important;
+}
+}
+</style>
+<style type=3D"text/css">
+u + #new-gmail-hack {
+display: block !important;
+}
+</style>
+</head>
+<body style=3D"margin:0px;padding:0px;-webkit-text-size-adjust:100%;-ms-tex=
+t-size-adjust:100%;">
+<!--Preheader-->
+<div class=3D"preheader" style=3D"display:none;font-size:1px;color:#ffffff;=
+line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+</div>
+<!-- end preheader-->
+<style type=3D"text/css">
+.addressLink a { color: #8899A6 !important; text-decoration: none !importan=
+t; }
+</style>
+<!--[if IE]>
+<style type=3D"text/css" inline=3D"false">
+.img_ie {
+width: 394px !important;
+}
+
+.img_2_ie {
+width: 196px !important;
+}
+
+.img_3a_ie {
+width: 262px !important;
+}
+
+.img_3b_ie {
+width: 130px !important;
+}
+</style>
+<![endif]-->
+<table border=3D"0" style=3D"width:100%; background-color: #ffffff;padding:=
+0px;" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<table border=3D"0" align=3D"center" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td class=3D"empty" width=3D"12" style=3D"min-width: 12px;padding:0px;font-=
+size:0px;line-height:1px;padding:0px;"> &nbsp; </td>
+<td class=3D"empty" style=3D"padding:0px;font-size:0px;line-height:1px;padd=
+ing:0px;">
+<table border=3D"0" class=3D"wrapper" style=3D"padding:0px;width:448px;">
+<!-- header start -->
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<table border=3D"0" style=3D"width:100%;padding:0px;">
+<tbody>
+<tr>
+<td height=3D"24" style=3D"height:24px;padding:0px;"> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<table border=3D"0" align=3D"center" width=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td class=3D"empty" style=3D"padding:0px;font-size:0px;line-height:1px;padd=
+ing:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left" styl=
+e=3D"padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://twitter.com/i/redirect?url=
+=3Dhttps%3A%2F%2Ftwitter.com%2Fi%2Fnotifications&amp;t=3D1+1521614911874&am=
+p;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D468f7d04ed406eaa726911276c1e7ac75=
+dfb418a&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;n=
+id=3D244+1559" style=3D"text-decoration:none;"> <img src=3D"https://abs.twi=
+mg.com/sticky/default_profile_images/default_profile_reasonably_small.png" =
+height=3D"32" class=3D"avatar" style=3D"border:none;border-radius:24px;" />=
+ </a> </td>
+<td valign=3D"top" style=3D"padding:0px;"> <a href=3D"https://twitter.com/i=
+/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fi%2Fnotifications&amp;t=3D1+152=
+1614911874&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dca30bfcd05c5e629e9ea=
+86468a4c7ad590f8b5d9&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D4=
+8607848&amp;nid=3D244+1562" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"padding:0p=
+x;">
+<tbody>
+<tr>
+<td class=3D"avatar_badge" bgcolor=3D"#E0245E" align=3D"center" style=3D"pa=
+dding:0px;padding:4px;font-family:'Helvetica Neue', Helvetica, Arial, sans-=
+serif;font-size:11px;line-height:12px;color:#ffffff;border-radius:10px;min-=
+width:12px;text-align:center;"> 59 </td>
+</tr>
+</tbody>
+</table> </a> </td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" align=3D"right" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"right" valign=3D"top" style=3D"padding:0px;"> <a href=3D"https=
+://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2F&amp;t=3D1+1521=
+614911874&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D053c125fbac478b6e2a53=
+77fc41e6f605aee75e1&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48=
+607848&amp;nid=3D244+1553" style=3D"text-decoration:none;"> <img src=3D"htt=
+ps://ea.twimg.com/email/self_serve/media/logo_twitter-1497383721365.png" he=
+ight=3D"24" style=3D"border:none;" /> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"header whats_happening" align=3D"left" style=3D"padding:0px;fo=
+nt-family:Helvetica, Arial, sans-serif;font-weight:600;color:#292F33;font-s=
+ize:32px;line-height:36px;padding:0px;"> =EC=B5=9C=EC=8B=A0 =EC=86=8C=EC=8B=
+=9D </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"18" style=3D"height:18px;padding:0px;"> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<!-- header end -->
+<tr>
+<td class=3D"empty" style=3D"padding:0px;font-size:0px;line-height:1px;padd=
+ing:0px;"> <img width=3D"1" height=3D"1" src=3D"https://twitter.com/scribe/=
+ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;iid=3Db9b0584c20ee444fa736=
+b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+20" style=3D"border:none;" />=
+ </td>
+</tr>
+<!-- content start -->
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fwww.etnews.com%2F20180320000372&amp;t=3D1+1521614911=
+875&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D95f6f24640b796a3e320dba6e82=
+ea21921ed9a62&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848=
+&amp;nid=3D244+272830465" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.etnews.com%2F20180320000372&amp;t=3D1+1521614911876&amp;cn=3DZmxle=
+GlibGVfcmVjcw%3D%3D&amp;sig=3D5c63460035bc455a7a794da311fd24ca9ff2ccd7&amp;=
+iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+272=
+830466" style=3D"text-decoration:none;">
+<!-- social proof header start -->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"border_bot=
+tom_grey" style=3D"padding:0px;min-width:100%;width:100%;border-bottom:1px =
+solid #AAB8C2;">
+<tbody>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"social_proof_detail" style=3D"padding:0px;font-family:Helvetic=
+a, Arial, sans-serif;font-size:12px;line-height:16px;color:#14171A;"> =EA=
+=B4=91=ED=8C=8C=EB=A6=AC_IT =EC=9D=B4=EC=95=BC=EA=B8=B0 =EB=8B=98=EC=9D=B4 =
+=EA=B3=B5=EC=9C=A0=ED=96=88=EC=8A=B5=EB=8B=88=EB=8B=A4 </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+</tbody>
+</table>
+<!-- social proof header end --> </a> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.etnews.com%2F20180320000372&amp;t=3D1+1521614911876&amp;cn=3DZmxle=
+GlibGVfcmVjcw%3D%3D&amp;sig=3D00fcd9daac0baa8c4bc21acf704494bbeef75984&amp;=
+iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+272=
+830464" style=3D"text-decoration:none;"> <img src=3D"https://pbs.twimg.com/=
+news_img/976043428990607360/KNamFpRQ?format=3Djpg&amp;name=3Dorig" width=3D=
+"400" class=3D"width_full" style=3D"border:none;" /> </a> </td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">[=EA=B5=AD=EC=A0=9C]=ED=83=9C=EA=B5=AD, =E4=B8=AD BYD =EA=B3=A0=EA=
+=B8=89 =ED=83=9D=EC=8B=9C=EC=9A=A9 =EC=A0=84=EA=B8=B0=EC=B0=A8 1000=EB=8C=
+=80 =EB=8F=84=EC=9E=85</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">=EB=8C=80=
+=ED=95=9C=EB=AF=BC=EA=B5=AD IT=ED=8F=AC=ED=84=B8=EC=9D=98 =EC=A4=91=EC=8B=
+=AC! =EC=9D=B4=ED=8B=B0=EB=89=B4=EC=8A=A4</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=EC=
+=A4=91=EA=B5=AD =EC=A0=84=EA=B8=B0=EC=B0=A8 =EB=A9=94=EC=9D=B4=EC=BB=A4 BYD=
+=EC=B0=A8=EB=9F=89=EC=9D=84 =EC=88=98=EC=9E=85=ED=8C=90=EB=A7=A4=ED=95=98=
+=EB=8A=94 =EC=97=85=EC=B2=B4=EC=99=80 =ED=83=9C=EA=B5=AD =ED=83=9D=EC=8B=9C=
+=ED=9A=8C=EC=82=AC=EB=8A=94 19=EC=9D=BC BYD =EC=B0=A8=EB=9F=89=EC=9D=84 =EA=
+=B3=A0=EA=B8=89 =ED=83=9D=EC=8B=9C=EC=9A=A9=EC=9C=BC=EB=A1=9C =EC=88=98=EC=
+=9E=85=ED=95=9C=EB=8B=A4=EA=B3=A0 =EB=B0=9C=ED=91=9C=ED=96=88=EB=8B=A4. =EC=
+=96=91=EC=82=AC=EB=8A=94 =EB=82=B4=EB=85=84=EA=B9=8C=EC=A7=80 BYD =EC=A0=84=
+=EA=B8=B0=EC=B0=A8 1000=EB=8C=80=EB=A5=BC =EC=A4=91=EA=B5=AD=EC=97=90=EC=84=
+=9C =EC=88=98=EC=9E=85=ED=82=A4=EB=A1=9C =ED=95=98=EA=B3=A0 =EC=98=AC =EC=
+=97=AC=EB=A6=84=EC=97=90 100...</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fwww.etnews.com%2F2018032000037=
+2&amp;t=3D1+1521614911876&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3De21eb=
+1c9a15a3f5c228ee88857693474231fe2ba&amp;iid=3Db9b0584c20ee444fa736b4d6776c9=
+ad5&amp;uid=3D48607848&amp;nid=3D244+272830480" target=3D"_blank" class=3D"=
+bulletproof-btn-white-2 button-width-full" style=3D"text-decoration:none;wi=
+dth:90%;min-width:86%;display:block;font-size:12px;font-family:Helvetica, A=
+rial, sans-serif;color:#e0245e;text-decoration:none;border-radius:100px;pad=
+ding:5px 18px;border:1px solid #e0245e;display:inline-block;font-weight:bol=
+d;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> =EB=8C=80=ED=95=9C=EB=
+=AF=BC=EA=B5=AD IT=ED=8F=AC=ED=84=B8=EC=9D=98 =EC=A4=91=EC=8B=AC! =EC=9D=B4=
+=ED=8B=B0=EB=89=B4=EC=8A=A4=EC=97=90=EC=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621733&amp;=
+t=3D1+1521614911877&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dffe62eda06f=
+e5748e8e1b7d703680814316604c0&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&am=
+p;uid=3D48607848&amp;nid=3D244+277024769" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621733&amp;t=3D1+152161491187=
+8&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D434f2a71b8f1e04a2429c32a60efd=
+86b11f5f2c1&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&a=
+mp;nid=3D244+277024770" style=3D"text-decoration:none;">
+<!-- social proof header start -->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"border_bot=
+tom_grey" style=3D"padding:0px;min-width:100%;width:100%;border-bottom:1px =
+solid #AAB8C2;">
+<tbody>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"social_proof_detail" style=3D"padding:0px;font-family:Helvetic=
+a, Arial, sans-serif;font-size:12px;line-height:16px;color:#14171A;"> =EA=
+=B4=91=ED=8C=8C=EB=A6=AC_IT =EC=9D=B4=EC=95=BC=EA=B8=B0 =EB=8B=98=EC=9D=B4 =
+=EA=B3=B5=EC=9C=A0=ED=96=88=EC=8A=B5=EB=8B=88=EB=8B=A4 </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+</tbody>
+</table>
+<!-- social proof header end --> </a> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621733&amp;t=3D1+152161491187=
+8&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D381c04d553764417ef9666c5d8ce2=
+49685b4c030&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&a=
+mp;nid=3D244+277024768" style=3D"text-decoration:none;"> <img src=3D"https:=
+//pbs.twimg.com/news_img/976040926970658817/pmMWx49I?format=3Djpg&amp;name=
+=3Dorig" width=3D"400" class=3D"width_full" style=3D"border:none;" /> </a> =
+</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">[=EC=98=81=EC=83=81] =EB=AC=B8=EB=AC=B4=EC=9D=BC =EC=B4=9D=EC=9E=A5 =
+=E2=80=9C=EB=84=88=EB=AC=B4 =EB=8A=A6=EC=97=88=EC=8A=B5=EB=8B=88=EB=8B=A4=
+=E2=80=9D =EB=B0=95=EC=A2=85=EC=B2=A0 =EC=97=B4=EC=82=AC =EB=B6=80=EC=B9=9C=
+=EC=97=90 =EC=82=AC=EA=B3=BC</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">KBS =EB=
+=89=B4=EC=8A=A4</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=EB=
+=AC=B8=EB=AC=B4=EC=9D=BC =EA=B2=80=EC=B0=B0=EC=B4=9D=EC=9E=A5=EC=9D=B4 =EA=
+=B3=A0 =EB=B0=95=EC=A2=85=EC=B2=A0 =EC=97=B4=EC=82=AC=EC=9D=98 =EC=95=84=EB=
+=B2=84=EC=A7=80 =EB=B0=95=EC=A0=95=EA=B8=B0 =EC=94=A8=EB=A5=BC =EC=A7=81=EC=
+=A0=91 =EB=A7=8C=EB=82=98 =EC=82=AC=EA=B3=BC=ED=96=88=EB=8B=A4. =EB=AC=B8 =
+=EC=B4=9D=EC=9E=A5=EC=9D=80 =EB=B3=91=EC=83=81=EC=97=90 =EB=88=84=EC=9A=B4 =
+=EB=B0=95 =EC=94=A8=EB=A5=BC =EC=B0=BE=EC=95=84 &quot;=EB=84=88=EB=AC=B4 =
+=EB=8A=A6=EA=B2=8C =EC=B0=BE=EC=95=84=EB=B5=99=EA=B3=A0 =EC=82=AC=EA=B3=BC =
+=EB=A7=90=EC=94=80=EB=93=9C=EB=A6=AC=EA=B2=8C =EB=8F=BC =EC=A3=84=EC=86=A1=
+=ED=95=98=EB=8B=A4&quot;=EB=A9=B0 &quot;=ED=9B=84=EB=B0=B0=EB=93=A4=EC=9D=
+=B4 =EC=9E=98 =EA=B0=80=EA=BE=B8=EC=96=B4=EC=84=9C =EC=A0=9C=EB=8C=80=EB=A1=
+=9C =EB=90=9C =EB=82=98=EB=9D=BC=EA=B0=80</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fnews.kbs.co.kr%2Fnews%2Fview.d=
+o%3Fncd%3D3621733&amp;t=3D1+1521614911878&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;sig=3D575da68b126b5b039044e289c4f380a9e79148cf&amp;iid=3Db9b0584c20ee4=
+44fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+277024784" target=3D"_=
+blank" class=3D"bulletproof-btn-white-2 button-width-full" style=3D"text-de=
+coration:none;width:90%;min-width:86%;display:block;font-size:12px;font-fam=
+ily:Helvetica, Arial, sans-serif;color:#e0245e;text-decoration:none;border-=
+radius:100px;padding:5px 18px;border:1px solid #e0245e;display:inline-block=
+;font-weight:bold;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> KBS =EB=89=B4=EC=8A=A4=
+=EC=97=90=EC=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fwww.nocutnews.co.kr%2Fnews%2F4941389&amp;t=3D1+15216=
+14911879&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D25fddf80eb2dd994be910f=
+081f98644ff3807003&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D486=
+07848&amp;nid=3D244+281219073" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.nocutnews.co.kr%2Fnews%2F4941389&amp;t=3D1+1521614911880&amp;cn=3D=
+ZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dead6e2d386deb054225376026d6a490125612f8b=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+281219074" style=3D"text-decoration:none;">
+<!-- social proof header start -->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"border_bot=
+tom_grey" style=3D"padding:0px;min-width:100%;width:100%;border-bottom:1px =
+solid #AAB8C2;">
+<tbody>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"social_proof_detail" style=3D"padding:0px;font-family:Helvetic=
+a, Arial, sans-serif;font-size:12px;line-height:16px;color:#14171A;"> =EA=
+=B4=91=ED=8C=8C=EB=A6=AC_IT =EC=9D=B4=EC=95=BC=EA=B8=B0 =EB=8B=98=EC=9D=B4 =
+=EA=B3=B5=EC=9C=A0=ED=96=88=EC=8A=B5=EB=8B=88=EB=8B=A4 </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+</tbody>
+</table>
+<!-- social proof header end --> </a> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.nocutnews.co.kr%2Fnews%2F4941389&amp;t=3D1+1521614911880&amp;cn=3D=
+ZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D946c8544ae44577ce1f0cee4a0baa6c33d56a881=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+281219072" style=3D"text-decoration:none;"> <img src=3D"https://pbs.twimg=
+.com/news_img/976043208881848320/0bpSmBFe?format=3Djpg&amp;name=3Dorig" wid=
+th=3D"400" class=3D"width_full" style=3D"border:none;" /> </a> </td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">=EC=BA=A0=EB=B2=A8 =E5=89=8D =E7=BE=8E=EC=B0=A8=EA=B4=80=EB=B3=B4 &q=
+uot;=EC=A0=95=EC=83=81=ED=9A=8C=EB=8B=B4 =EA=B3=84=EA=B8=B0 =ED=95=9C=EA=B5=
+=AD=EC=9D=B4 =EB=8F=99=EB=B6=81=EC=95=84 =EC=A3=BC=EB=8F=84&quot;</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">=EB=85=B8=
+=EC=BB=B7=EB=89=B4=EC=8A=A4</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=EC=
+=BB=A4=ED=8A=B8 =EC=BA=A0=EB=B2=A8 =EC=A0=84 =EA=B5=AD=EB=AC=B4=EB=B6=80 =
+=EB=8F=99=EC=95=84=ED=83=9C =EC=B0=A8=EA=B4=80=EB=B3=B4=EB=8A=94 =EB=B6=81=
+=EB=AF=B8 =EC=A0=95=EC=83=81=ED=9A=8C=EB=8B=B4 =EA=B5=AD=EB=A9=B4=EC=97=90=
+=EC=84=9C =ED=95=9C=EA=B5=AD=EC=9D=98 =EC=97=AD=ED=95=A0=EC=9D=84 =EA=B0=95=
+=EC=A1=B0=ED=95=98=EB=A9=B4=EC=84=9C &quot;=ED=95=9C=EA=B5=AD=EC=9D=B4 =EB=
+=8F=99=EB=B6=81=EC=95=84 =EC=A7=80=EC=97=AD=EC=9D=98 =EB=AF=B8=EB=9E=98=EB=
+=A5=BC =EB=81=8C=EA=B3=A0 =EA=B0=88 =ED=9E=98=EC=9D=84 =EA=B0=96=EA=B2=8C =
+=EB=90=A0 =EA=B2=83&quot;=EC=9D=B4=EB=9D=BC=EA=B3=A0 =EB=A7=90=ED=96=88=EB=
+=8B=A4. =EC=BA=A0=EB=B2=A8 =EC=A0=84 =EC=B0=A8=EA=B4=80=EB=B3=B4=EB=8A=94 1=
+9=EC=9D=BC(=ED=98=84=EC=A7=80=EC=8B=9C=EA=B0=84) =EB=AF=B8=EA=B5=AD=EC=A7=
+=84=EB=B3=B4=EC=84=BC=ED=84=B0(C...</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fwww.nocutnews.co.kr%2Fnews%2F4=
+941389&amp;t=3D1+1521614911880&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D=
+b8873ded8fbc37bff2a674be35057a36ab833da8&amp;iid=3Db9b0584c20ee444fa736b4d6=
+776c9ad5&amp;uid=3D48607848&amp;nid=3D244+281219088" target=3D"_blank" clas=
+s=3D"bulletproof-btn-white-2 button-width-full" style=3D"text-decoration:no=
+ne;width:90%;min-width:86%;display:block;font-size:12px;font-family:Helveti=
+ca, Arial, sans-serif;color:#e0245e;text-decoration:none;border-radius:100p=
+x;padding:5px 18px;border:1px solid #e0245e;display:inline-block;font-weigh=
+t:bold;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> =EB=85=B8=EC=BB=B7=EB=
+=89=B4=EC=8A=A4=EC=97=90=EC=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621880&amp;=
+t=3D1+1521614911881&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dfeb9590d36b=
+8c774abc702f05d2bee094d97fb40&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&am=
+p;uid=3D48607848&amp;nid=3D244+285413377" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621880&amp;t=3D1+152161491188=
+2&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dbca972a71fd519d6e4a214853f2f0=
+40b52905f68&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&a=
+mp;nid=3D244+285413378" style=3D"text-decoration:none;">
+<!-- social proof header start -->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"border_bot=
+tom_grey" style=3D"padding:0px;min-width:100%;width:100%;border-bottom:1px =
+solid #AAB8C2;">
+<tbody>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"social_proof_detail" style=3D"padding:0px;font-family:Helvetic=
+a, Arial, sans-serif;font-size:12px;line-height:16px;color:#14171A;"> =EA=
+=B4=91=ED=8C=8C=EB=A6=AC_IT =EC=9D=B4=EC=95=BC=EA=B8=B0 =EB=8B=98=EC=9D=B4 =
+=EA=B3=B5=EC=9C=A0=ED=96=88=EC=8A=B5=EB=8B=88=EB=8B=A4 </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"social_proof_margin_lr" style=3D"padding:0px;widt=
+h:24px;"></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"12" style=3D"height:12px;padding:0px;"></td>
+</tr>
+</tbody>
+</table>
+<!-- social proof header end --> </a> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fnews.kbs.co.kr%2Fnews%2Fview.do%3Fncd%3D3621880&amp;t=3D1+152161491188=
+2&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3Dd5ffd57b0a2bc8f9ee503e956499e=
+8a425e85ba5&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&a=
+mp;nid=3D244+285413376" style=3D"text-decoration:none;"> <img src=3D"https:=
+//pbs.twimg.com/news_img/976224370526904321/gi65cScV?format=3Djpg&amp;name=
+=3Dorig" width=3D"400" class=3D"width_full" style=3D"border:none;" /> </a> =
+</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">=ED=94=84=EB=9E=91=EC=8A=A4 =ED=8C=8C=EB=A6=AC, =EB=8C=80=EC=A4=91=
+=EA=B5=90=ED=86=B5 =EC=A0=84=EB=A9=B4 =EB=AC=B4=EB=A3=8C=ED=99=94 =EB=B0=A9=
+=EC=95=88 =EA=B2=80=ED=86=A0</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">KBS =EB=
+=89=B4=EC=8A=A4</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=ED=
+=94=84=EB=9E=91=EC=8A=A4 =ED=8C=8C=EB=A6=AC=EC=8B=9C=EA=B0=80 =EB=8C=80=EA=
+=B8=B0=ED=99=98=EA=B2=BD=EC=9D=84 =EC=9C=84=ED=95=B4 =EB=8C=80=EC=A4=91=EA=
+=B5=90=ED=86=B5=EC=9D=84 =EC=A0=84=EB=A9=B4 =EB=AC=B4=EB=A3=8C=ED=99=94=ED=
+=95=98=EB=8A=94 =EB=B0=A9=EC=95=88=EC=9D=84 =EA=B2=80=ED=86=A0=ED=95=98=EA=
+=B3=A0 =EC=9E=88=EB=8B=A4. =EC=95=88 =EC=9D=B4=EB=8B=AC=EA=B3=A0 =ED=8C=8C=
+=EB=A6=AC=EC=8B=9C=EC=9E=A5=EC=9D=80 20=EC=9D=BC(=ED=98=84=EC=A7=80=EC=8B=
+=9C=EA=B0=84) =ED=94=84=EB=9E=91=EC=8A=A4=EB=B8=94=EB=A2=B0 =EB=B0=A9=EC=86=
+=A1=EA=B3=BC =EC=9D=B8=ED=84=B0=EB=B7=B0=EC=97=90=EC=84=9C =EC=B5=9C=EA=B7=
+=BC =EC=8B=9C=EC=9D=98=ED=9A=8C=EC=99=80 =EC=99=B8=EB=B6=80 =EC=A0=84=EB=AC=
+=B8=EA=B0=80=EB=93=A4=EC=97=90=EA=B2=8C =EB=8C=80=EC=A4=91=EA=B5=90=ED=86=
+=B5=EC=9D=84 =EC=A0=84=EB=A9=B4</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fnews.kbs.co.kr%2Fnews%2Fview.d=
+o%3Fncd%3D3621880&amp;t=3D1+1521614911882&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;sig=3D4f3e3a79bdf988cc3c51255b0cee33a9efc549ec&amp;iid=3Db9b0584c20ee4=
+44fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+285413392" target=3D"_=
+blank" class=3D"bulletproof-btn-white-2 button-width-full" style=3D"text-de=
+coration:none;width:90%;min-width:86%;display:block;font-size:12px;font-fam=
+ily:Helvetica, Arial, sans-serif;color:#e0245e;text-decoration:none;border-=
+radius:100px;padding:5px 18px;border:1px solid #e0245e;display:inline-block=
+;font-weight:bold;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> KBS =EB=89=B4=EC=8A=A4=
+=EC=97=90=EC=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fwww.bloter.net%2Farchives%2F305171&amp;t=3D1+1521614=
+911882&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D939d0c25bb93598f87f8f931=
+3de8ea4357e60e54&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607=
+848&amp;nid=3D244+289607681" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.bloter.net%2Farchives%2F305171&amp;t=3D1+1521614911884&amp;cn=3DZm=
+xleGlibGVfcmVjcw%3D%3D&amp;sig=3D438c48658291d442a70149cab4eaf1c93cd9aebb&a=
+mp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+=
+289607680" style=3D"text-decoration:none;"> <img src=3D"https://pbs.twimg.c=
+om/news_img/975935938315431936/qhR39N52?format=3Djpg&amp;name=3Dorig" width=
+=3D"400" class=3D"width_full" style=3D"border:none;" /> </a> </td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">=EC=9C=84=EC=B9=98=EA=B8=B0=EB=B0=98 AR =EA=B2=8C=EC=9E=84 '=EA=B3=
+=A0=EC=8A=A4=ED=8A=B8=EB=B2=84=EC=8A=A4=ED=84=B0=EC=A6=88 =EC=9B=94=EB=93=
+=9C' =EA=B3=B5=EA=B0=9C</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">Bloter.ne=
+t</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=EC=
+=9C=84=EC=B9=98=EA=B8=B0=EB=B0=98 =EC=A6=9D=EA=B0=95=ED=98=84=EC=8B=A4(AR) =
+=EA=B2=8C=EC=9E=84 '=EA=B3=A0=EC=8A=A4=ED=8A=B8=EB=B2=84=EC=8A=A4=ED=84=B0=
+=EC=A6=88 =EC=9B=94=EB=93=9C' =ED=94=8C=EB=A0=88=EC=9D=B4 =EC=98=81=EC=83=
+=81=EC=9D=B4 =EA=B3=B5=EA=B0=9C=EB=90=90=EB=8B=A4. =EA=B5=AC=EA=B8=80 =EC=
+=A7=80=EB=8F=84 API=EB=A5=BC =EC=A0=81=EC=9A=A9=ED=95=B4 '=ED=8F=AC=EC=BC=
+=93=EB=AA=AC=EA=B3=A0'=EC=B2=98=EB=9F=BC =ED=98=84=EC=8B=A4 =EC=84=B8=EA=B3=
+=84=EB=A5=BC =EB=8F=8C=EC=95=84=EB=8B=A4=EB=8B=88=EB=A9=B4=EC=84=9C =EC=9C=
+=A0=EB=A0=B9=EC=9D=84 =EC=82=AC=EB=83=A5=ED=95=98=EA=B3=A0 =EC=88=98=EC=A7=
+=91=ED=95=98=EB=8A=94 =EA=B2=8C =EA=B2=8C=EC=9E=84=EC=9D=98 =ED=8A=B9=EC=A7=
+=95=EC=9D=B4=EB=8B=A4. =EB=84=A4=EC=8B=9C=EC=82=BC=EC=8B=AD=EC=82=BC=EB=B6=
+=84=EC=9D=80 3...</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fwww.bloter.net%2Farchives%2F30=
+5171&amp;t=3D1+1521614911884&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D7b=
+cf4f17984cf250574ee1ffcc27ee36f75f0eb4&amp;iid=3Db9b0584c20ee444fa736b4d677=
+6c9ad5&amp;uid=3D48607848&amp;nid=3D244+289607696" target=3D"_blank" class=
+=3D"bulletproof-btn-white-2 button-width-full" style=3D"text-decoration:non=
+e;width:90%;min-width:86%;display:block;font-size:12px;font-family:Helvetic=
+a, Arial, sans-serif;color:#e0245e;text-decoration:none;border-radius:100px=
+;padding:5px 18px;border:1px solid #e0245e;display:inline-block;font-weight=
+:bold;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> Bloter.net=EC=97=90=EC=
+=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20-->
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td class=3D"full_tweet_box" style=3D"padding:0px;border:1px solid #AAB8C2;=
+background-color:#FFFFFF;border-radius:4px;"> <a href=3D"https://t.co/redir=
+ect?url=3Dhttp%3A%2F%2Fwww.bloter.net%2Farchives%2F305201&amp;t=3D1+1521614=
+911884&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D8c5d95ebacde4e9770405564=
+96851eace0eb347d&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607=
+848&amp;nid=3D244+293801985" style=3D"text-decoration:none;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td height=3D"24" class=3D"module_margin_tb" style=3D"padding:0px;height:24=
+px;"></td>
+</tr>
+<!-- top margin -->
+<tr>
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- left margin -->
+<td style=3D"padding:0px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%=
+;padding:0px;">
+<tbody>
+<tr>
+<td style=3D"padding:0px;"> <a href=3D"https://t.co/redirect?url=3Dhttp%3A%=
+2F%2Fwww.bloter.net%2Farchives%2F305201&amp;t=3D1+1521614911886&amp;cn=3DZm=
+xleGlibGVfcmVjcw%3D%3D&amp;sig=3Dbdbba68dbdea5eac3e0bca7b93aa8536a9b6424c&a=
+mp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+=
+293801984" style=3D"text-decoration:none;"> <img src=3D"https://pbs.twimg.c=
+om/news_img/976298121012559872/QL_Majvv?format=3Djpg&amp;name=3Dorig" width=
+=3D"400" class=3D"width_full" style=3D"border:none;" /> </a> </td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_title" style=3D"padding:0px;font-family:Helvetica, A=
+rial, sans-serif;font-size:14px;line-height:18px;font-weight:bold;color:#29=
+2F33;">=EC=9D=B4=EA=B1=B4 =E2=80=98=ED=91=9C=EC=A0=88=E2=80=99=EC=9D=B8=EA=
+=B0=80=EC=9A=94, =E2=80=98=EC=B0=B8=EA=B3=A0=E2=80=99=EC=9D=B8=EA=B0=80=EC=
+=9A=94?</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_source" style=3D"padding:0px;font-family:Helvetica, =
+Arial, sans-serif;font-size:14px;line-height:18px;color:#657786;">Bloter.ne=
+t</td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height:6px;padding:0px;"></td>
+</tr>
+<tr>
+<td class=3D"link_card_description" style=3D"padding:0px;font-family:Helvet=
+ica, Arial, sans-serif;font-size:14px;line-height:18px;color:#292F33;">=E2=
+=80=98=ED=8F=AC=EC=9D=B8=ED=95=B8=EB=93=9C=E2=80=99=EB=9D=BC=EB=8A=94 =EC=
+=95=B1=EC=9D=84 =EC=95=84=EC=8B=9C=EB=82=98=EC=9A=94? =EC=9C=A0=EA=B8=B0=EB=
+=8F=99=EB=AC=BC=EC=97=90 =EA=B4=80=EC=8B=AC=EC=9E=88=EB=8A=94 =EB=B6=84=EC=
+=9D=B4=EB=9D=BC=EB=A9=B4 =ED=95=9C =EB=B2=88=EC=AF=A4 =EB=93=A4=EC=96=B4=EB=
+=B3=B8 =EC=95=B1=EC=9D=BC =EA=B2=81=EB=8B=88=EB=8B=A4. =ED=8F=AC=EC=9D=B8=
+=ED=95=B8=EB=93=9C=EB=8A=94 =EC=9C=A0=EA=B8=B0=EB=8F=99=EB=AC=BC=EC=9D=84 =
+=EC=9E=85=EC=96=91=ED=95=98=EA=B1=B0=EB=82=98 =EC=8B=A4=EC=A2=85=EB=8F=99=
+=EB=AC=BC=EC=9D=84 =EC=B0=BE=EC=9D=84 =EB=95=8C =EC=93=B0=EB=8A=94 =EC=95=
+=B1=EC=9E=85=EB=8B=88=EB=8B=A4. =EC=A0=84=EC=A7=81 =EC=88=98=EC=9D=98=EC=82=
+=AC=EC=9D=B8 =EC=9D=B4=ED=99=98=ED=9D=AC =ED=8F=AC=EC=9D=B8=ED=95=B8=EB=93=
+=9C =EB=8C=80=ED=91=9C=EB=8A=94 =EB=8C=80=ED=95=99 =EC=8B=9C=EC=A0=88=EB=B6=
+=80=ED=84=B0...</td>
+</tr>
+<tr>
+<td height=3D"14" style=3D"height:14px;padding:0px;"></td>
+</tr>
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"left" widt=
+h=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-white-1" style=3D"padding:0px=
+;border-radius:100px;line-height:18px;background-color:#ffffff;"> <a href=
+=3D"https://t.co/redirect?url=3Dhttp%3A%2F%2Fwww.bloter.net%2Farchives%2F30=
+5201&amp;t=3D1+1521614911885&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D1b=
+bdb055f5fba033da93a6dcb43ed3a769c04e2f&amp;iid=3Db9b0584c20ee444fa736b4d677=
+6c9ad5&amp;uid=3D48607848&amp;nid=3D244+293802000" target=3D"_blank" class=
+=3D"bulletproof-btn-white-2 button-width-full" style=3D"text-decoration:non=
+e;width:90%;min-width:86%;display:block;font-size:12px;font-family:Helvetic=
+a, Arial, sans-serif;color:#e0245e;text-decoration:none;border-radius:100px=
+;padding:5px 18px;border:1px solid #e0245e;display:inline-block;font-weight=
+:bold;white-space:nowrap;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> Bloter.net=EC=97=90=EC=
+=84=9C =EB=8D=94 =EB=B3=B4=EA=B8=B0
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+<td width=3D"24" class=3D"module_margin_lr" style=3D"padding:0px;width:24px=
+;min-width:12px;"></td>
+<!-- right margin -->
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"24" class=3D"news_margin_bottom" style=3D"padding:0px;height:=
+24px;"></td>
+</tr>
+<!-- bottom margin -->
+</tbody>
+</table> </a> </td>
+</tr>
+<tr>
+<td height=3D"20" class=3D"module_space" style=3D"padding:0px;height:20px;"=
+> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<!-- content end -->
+<!-- footer start -->
+<tr>
+<td style=3D"padding:0px;">
+<table border=3D"0" align=3D"center" style=3D"width:100%;padding:0px;">
+<tbody>
+<tr>
+<td height=3D"20" style=3D"height:20px;padding:0px;"> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;"> <span class=3D"footer_type" st=
+yle=3D"font-family:Helvetica, Arial, sans-serif;color:#8899a6;font-size:12p=
+x;padding:0px;font-weight:normal;line-height:12px;"> <a href=3D"https://twi=
+tter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2Fsettings%2Fnotificati=
+ons&amp;t=3D1+1521614911886&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D&amp;sig=3D7bb=
+1d0456dfaf7d830a024742d1bf748c094ca60&amp;iid=3Db9b0584c20ee444fa736b4d6776=
+c9ad5&amp;uid=3D48607848&amp;nid=3D244+1560" class=3D"footer_link" style=3D=
+"text-decoration:none;font-family:Helvetica, Arial, sans-serif;color:#e0245=
+e;font-size:12px;padding:0px;font-weight:600;line-height:12px;"> =EC=84=A4=
+=EC=A0=95 </a> &nbsp;|&nbsp; <a href=3D"https://twitter.com/i/redirect?url=
+=3Dhttps%3A%2F%2Fsupport.twitter.com%2F&amp;t=3D1+1521614911886&amp;cn=3DZm=
+xleGlibGVfcmVjcw%3D%3D&amp;sig=3Dbf4489a2eaef0c907c5220514c506a10d5e27c83&a=
+mp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+=
+1561" class=3D"footer_link" style=3D"text-decoration:none;font-family:Helve=
+tica, Arial, sans-serif;color:#e0245e;font-size:12px;padding:0px;font-weigh=
+t:600;line-height:12px;"> =EA=B3=A0=EA=B0=9D=EC=A7=80=EC=9B=90 </a> &nbsp;|=
+&nbsp; <a href=3D"https://twitter.com/i/u?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw=
+%3D%3D&amp;sig=3D67951d807bce87ff11c85052e310cf8659df93cb&amp;iid=3Db9b0584=
+c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D244+26&amp;usbid=3D9=
+" class=3D"footer_link" style=3D"text-decoration:none;font-family:Helvetica=
+, Arial, sans-serif;color:#e0245e;font-size:12px;padding:0px;font-weight:60=
+0;line-height:12px;"> =EC=88=98=EC=8B=A0 =EA=B1=B0=EB=B6=80 </a> </span> </=
+td>
+</tr>
+<tr>
+<td height=3D"10" style=3D"height:10px;padding:0px;"> </td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"footer_type" style=3D"padding:0px;font-family=
+:Helvetica, Arial, sans-serif;color:#8899a6;font-size:12px;padding:0px;font=
+-weight:normal;line-height:12px;">@jibjung =EB=8B=98=EC=97=90=EA=B2=8C =EB=
+=B3=B4=EB=82=B4=EB=8A=94 =EC=9D=B4=EB=A9=94=EC=9D=BC=EC=9E=85=EB=8B=88=EB=
+=8B=A4 </td>
+</tr>
+<tr>
+<td height=3D"7" style=3D"height:7px;padding:0px;"> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:0px;">
+<table border=3D"0" align=3D"center" width=3D"100%" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td class=3D"empty" width=3D"48" style=3D"padding:0px;font-size:0px;line-he=
+ight:1px;padding:0px;">&nbsp; </td>
+<td align=3D"center" style=3D"padding:0px;"> <span class=3D"addressLink" st=
+yle=3D"font-family:Helvetica, Arial, sans-serif;font-size:12px;padding:0px;=
+font-weight:normal;line-height:16px;color:#8899A6 !important;"> <a href=3D"=
+http://twitter.com" style=3D"color: #8899a6 !important; text-decoration: no=
+ne !important;text-decoration:none;"><span style=3D"color: #8899a6 !importa=
+nt; text-decoration: none !important;">Twitter International Company<br />O=
+ne&nbsp;Cumberland&nbsp;Place,&nbsp;Fenian&nbsp;Street<br />Dublin&nbsp;2,&=
+nbsp;D02&nbsp;AX07&nbsp;&nbsp;IRELAND</span></a>
+<!--https://twitter.com/scribe/ibis?t=3D1&amp;cn=3DZmxleGlibGVfcmVjcw%3D%3D=
+&amp;iid=3Db9b0584c20ee444fa736b4d6776c9ad5&amp;uid=3D48607848&amp;nid=3D24=
+4+20--></span> </td>
+<td class=3D"empty" width=3D"48" style=3D"padding:0px;font-size:0px;line-he=
+ight:1px;padding:0px;">&nbsp; </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td height=3D"26" style=3D"height: 26px;padding:0px;"> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<!-- footer end -->
+</tbody>
+</table> </td>
+<td class=3D"empty" width=3D"12" style=3D"min-width: 12px;padding:0px;font-=
+size:0px;line-height:1px;padding:0px;"> &nbsp; </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td class=3D"hide" align=3D"center" style=3D"padding:0px;">
+<table align=3D"center" class=3D"hide" style=3D"padding:0px;">
+<tbody>
+<tr>
+<td width=3D"96" height=3D"1" style=3D"padding:0px;"> <img src=3D"https://e=
+a.twimg.com/email/self_serve/media/spacer-1476918453497.png" height=3D"1" w=
+idth=3D"96" style=3D"border:none;" /> </td>
+<td width=3D"96" height=3D"1" style=3D"padding:0px;"> <img src=3D"https://e=
+a.twimg.com/email/self_serve/media/spacer-1476918453497.png" height=3D"1" w=
+idth=3D"96" style=3D"border:none;" /> </td>
+<td width=3D"96" height=3D"1" style=3D"padding:0px;"> <img src=3D"https://e=
+a.twimg.com/email/self_serve/media/spacer-1476918453497.png" height=3D"1" w=
+idth=3D"96" style=3D"border:none;" /> </td>
+<td width=3D"96" height=3D"1" style=3D"padding:0px;"> <img src=3D"https://e=
+a.twimg.com/email/self_serve/media/spacer-1476918453497.png" height=3D"1" w=
+idth=3D"96" style=3D"border:none;" /> </td>
+<td width=3D"96" height=3D"1" style=3D"padding:0px;"> <img src=3D"https://e=
+a.twimg.com/email/self_serve/media/spacer-1476918453497.png" height=3D"1" w=
+idth=3D"96" style=3D"border:none;" /> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table>
+<section>
+<div id=3D"new-gmail-hack" style=3D"white-space: nowrap; font: 15px courier=
+; line-height: 0; display: none;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+</section>
+</body>
+</html>
+
+------=_Part_38348435_2112799858.1521614911912--
+
+

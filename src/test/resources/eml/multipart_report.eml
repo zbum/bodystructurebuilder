@@ -1,0 +1,109 @@
+Received: from [106.249.24.33] (HELO drmapp-fil902.dooray.com)
+ ([106.249.24.33]) by smtp011.dooray.com with SMTP id 76a627b05a4f358a; Fri,
+ 05 Jan 2018 17:21:30 +0900
+Received: from [153.120.59.199] ([153.120.59.199]) 
+          by drmapp-fil902.dooray.com ([43.227.118.191]) 
+          with ESMTP id 1515140489.362927.140604134659840.drmapp-fil902
+          for <support-market@nhn-playart.com>; 
+          Fri, 05 Jan 2018 17:21:29 +0900 (KST) 
+Received: from localhost (localhost)
+	by ne09.next-engine.com (8.13.8/8.13.8) id w058LTkk015181;
+	Fri, 5 Jan 2018 17:21:29 +0900
+Date: Fri, 5 Jan 2018 17:21:29 +0900
+From: Mail Delivery Subsystem <MAILER-DAEMON@ne09.next-engine.com>
+Message-Id: <201801050821.w058LTkk015181@ne09.next-engine.com>
+To: <support-market@nhn-playart.com>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="w058LTkk015181.1515140489/ne09.next-engine.com"
+Subject: Returned mail: see transcript for details
+X-TERRACE-DUMMYSUBJECT: Terrace Spam system                                  *
+Auto-Submitted: auto-generated (failure)
+X-TERRACE-SPAMMARK: NO       (SR:10.38)                     
+  (by Terrace)                                                  
+X-TERRACE-PEERIP: 153.120.59.199
+X-TERRACE-SID: 1515140489.362927.140604134659840.drmapp-fil902
+X-TERRACE-CLASSID: Terrace Spam system                                      
+Authentication-Results: mx.dooray.com;
+		spf=unknown clientip=153.120.59.199 envelop.from=;
+		dmarc=pass
+
+This is a MIME-encapsulated message
+
+--w058LTkk015181.1515140489/ne09.next-engine.com
+
+The original message was received at Fri, 5 Jan 2018 17:21:28 +0900
+from localhost [127.0.0.1]
+
+   ----- The following addresses had permanent fatal errors -----
+<yuu_suzu_tama0904@docomo.ne.jp>
+    (reason: 550 Unknown user yuu_suzu_tama0904@docomo.ne.jp)
+
+   ----- Transcript of session follows -----
+... while talking to mfsmax.docomo.ne.jp.:
+>>> DATA
+<<< 550 Unknown user yuu_suzu_tama0904@docomo.ne.jp
+554 5.0.0 Service unavailable
+
+--w058LTkk015181.1515140489/ne09.next-engine.com
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; ne09.next-engine.com
+Received-From-MTA: DNS; localhost
+Arrival-Date: Fri, 5 Jan 2018 17:21:28 +0900
+
+Final-Recipient: RFC822; yuu_suzu_tama0904@docomo.ne.jp
+Action: failed
+Status: 5.2.0
+Remote-MTA: DNS; mfsmax.docomo.ne.jp
+Diagnostic-Code: SMTP; 550 Unknown user yuu_suzu_tama0904@docomo.ne.jp
+Last-Attempt-Date: Fri, 5 Jan 2018 17:21:29 +0900
+
+--w058LTkk015181.1515140489/ne09.next-engine.com
+Content-Type: message/rfc822
+
+Return-Path: <support-market@nhn-playart.com>
+Received: from localhost (localhost [127.0.0.1])
+	by ne09.next-engine.com (8.13.8/8.13.8) with ESMTP id w058LSkk015179
+	for <yuu_suzu_tama0904@docomo.ne.jp>; Fri, 5 Jan 2018 17:21:28 +0900
+Date: Fri, 5 Jan 2018 17:21:28 +0900
+Message-Id: <201801050821.w058LSkk015179@ne09.next-engine.com>
+MIME-Version: 1.0
+From: "=?ISO-2022-JP?B?ICMbJEIlMyVzJVElOSVeITwlSBsoQg==?=" <support-market@nhn-playart.com>
+Reply-To: support-market@nhn-playart.com
+Subject: =?ISO-2022-JP?B?GyRCSC9BdyRLJEQkJCRGJE4kNDBGRmIbKEI=?=
+To: "=?ISO-2022-JP?B?GyRCT0JHOE0tPFMbKEIgGyRCTU0bKEI=?=" <yuu_suzu_tama0904@docomo.ne.jp>
+Cc: 
+Content-Type: text/plain; charset="ISO-2022-JP"
+Content-Transfer-Encoding: 7bit
+
+大変お待たせ致しましたが、ご注文のお品物がヤマト運輸へ引き渡されましたので、ご連絡申し上げます。
+本メール到着後、通常１日〜2日で商品をお届けしております。
+なお、交通事情や配送会社の配達状況等により遅れる場合もございますので、あらかじめご了承下さい。
+この度は誠にありがとうございました。
+商品到着まで何卒よろしくお願いいたします。
+ご注文番号P158740984296738171
+ご請求金額     3,032円
+配送伝票番号：765166838225
+
+*****
+
+------------------------
+ #コンパスマート
+▼お問い合わせ
+https://app.nhn-playart.com/compass/inquiry/index.nhn
+------------------------
+NHN PlayArt株式会社
+105-6322
+東京都港区虎ノ門虎ノ門ヒルズ森タワー 22階
+------------------------
+----------------------------------------------------------------
+　★以下URLより配送状況・注文内容を確認することが可能です。
+　　ログインパスワード：ゆけにんとえらち
+　　https://collectopus.shop/5892376/0ea8965ab3d3
+
+
+--w058LTkk015181.1515140489/ne09.next-engine.com--
+
+
+

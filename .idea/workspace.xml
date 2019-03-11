@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="654bbc9f-27ff-4df7-bf69-83f2af7c7037" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mult</find>
+      <find>rfc822</find>
+      <find>Part_25758_2084370209.1512443224617</find>
+      <find>calendar</find>
+      <find>_000_CY4PR05MB354474BA35F99CCEBCB6C3F99F230CY4PR05MB3544namp_</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java" />
+        <option value="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="828" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imap" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="imap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bodystructurebuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="eml" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552305292698" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v4.4.3/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="kr.co.manty.mail.imap" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/eml" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.BodyStructureBuilderTest.buildMultipartReport">
+    <configuration name="MessageTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.apache.james.mime4j.samples.tree.MessageTree" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/utils/complex.eml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.apache.james.mime4j.samples.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BodyStructureBuilderTest.build" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bodystructurebuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.manty.mail.imap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap" />
+      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.BodyStructureBuilderTest" />
+      <option name="METHOD_NAME" value="build" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BodyStructureBuilderTest.buildComplex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bodystructurebuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.manty.mail.imap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap" />
+      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.BodyStructureBuilderTest" />
+      <option name="METHOD_NAME" value="buildComplex" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BodyStructureBuilderTest.buildMultipartReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bodystructurebuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.manty.mail.imap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap" />
+      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.BodyStructureBuilderTest" />
+      <option name="METHOD_NAME" value="buildMultipartReport" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BodyStructureBuilderTest.builder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bodystructurebuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.manty.mail.imap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap" />
+      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.BodyStructureBuilderTest" />
+      <option name="METHOD_NAME" value="builder" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MessageTree" />
+      <item itemvalue="JUnit.BodyStructureBuilderTest.build" />
+      <item itemvalue="JUnit.BodyStructureBuilderTest.buildComplex" />
+      <item itemvalue="JUnit.BodyStructureBuilderTest.builder" />
+      <item itemvalue="JUnit.BodyStructureBuilderTest.buildMultipartReport" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BodyStructureBuilderTest.buildMultipartReport" />
+        <item itemvalue="JUnit.BodyStructureBuilderTest.buildComplex" />
+        <item itemvalue="Application.MessageTree" />
+        <item itemvalue="JUnit.BodyStructureBuilderTest.build" />
+        <item itemvalue="JUnit.BodyStructureBuilderTest.builder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../dooray/smtp" value="1487829504000" />
+        <entry key="$PROJECT_DIR$/../../playground/example" value="1459487574000" />
+        <entry key="$PROJECT_DIR$/../../playground/recfun" value="1462340330000" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="654bbc9f-27ff-4df7-bf69-83f2af7c7037" name="Default Changelist" comment="" />
+      <created>1552284671069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552284671069</updated>
+      <workItem from="1552284672945" duration="8648000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 17h 07m 58s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 17h 08m 48s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 17h 09m 39s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 17h 31m 42s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 18h 12m 50s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 18h 15m 24s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 18h 18m 26s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildComplex - 2019.03.11 at 18h 18m 51s.xml">
+      <configuration name="BodyStructureBuilderTest.buildComplex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.11 at 18h 22m 18s.xml">
+      <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.11 at 18h 22m 47s.xml">
+      <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8648000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.33547926" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="2" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32841328" />
+      <window_info anchor="bottom" id="Database Changes" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.70788044" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Remote Host" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2.jar!/org/apache/james/mime4j/dom/Message.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1582">
+          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2.jar!/org/apache/james/mime4j/stream/RecursionMode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2.jar!/org/apache/james/mime4j/stream/MimeTokenStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+          <folding>
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4604#4605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2.jar!/org/apache/james/mime4j/stream/EntityState.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+          <folding>
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2872#2873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/RecursionMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/test1.eml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/complex.eml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27229">
+          <caret line="3378" column="75" selection-start-line="3378" selection-start-column="14" selection-end-line="3378" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/EntityState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-655">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/MimeTokenStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="343" column="26" selection-start-line="343" selection-start-column="26" selection-end-line="343" selection-end-column="26" />
+          <folding>
+            <element signature="e#13316#13317#0" expanded="true" />
+            <element signature="e#13378#13379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-examples/0.8.2/apache-mime4j-examples-0.8.2-sources.jar!/org/apache/james/mime4j/samples/tree/MessageTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="122" column="11" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
+          <folding>
+            <element signature="e#4697#4698#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/multipart_report.eml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
