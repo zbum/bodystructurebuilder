@@ -1,10 +1,14 @@
 package kr.co.manty.mail.imap;
 
-import kr.co.manty.mail.imap.model.Tree;
+import kr.co.manty.mail.imap.model.BodyStructure;
+import kr.co.manty.mail.imap.model.MultipartBodyStructure;
+import kr.co.manty.mail.imap.model.SingleBodyStructure;
+import kr.co.manty.mail.imap.model.TextBodyStructure;
 import org.apache.james.mime4j.MimeException;
-import org.apache.james.mime4j.stream.BodyDescriptor;
-import org.apache.james.mime4j.stream.EntityState;
-import org.apache.james.mime4j.stream.MimeTokenStream;
+import org.apache.james.mime4j.dom.field.ContentTypeField;
+import org.apache.james.mime4j.dom.field.ParsedField;
+import org.apache.james.mime4j.field.DefaultFieldParser;
+import org.apache.james.mime4j.stream.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +20,7 @@ public class BodyStructureBuilder {
     }
 
     public static String build(InputStream mimeInputStream) {
-        Tree<BodyDescriptor> partTree = null;
+        BodyStructure currentBodyStructure = null;
 
         MimeTokenStream stream = new MimeTokenStream();
         try (InputStream inputStream = mimeInputStream) {
@@ -25,22 +29,57 @@ public class BodyStructureBuilder {
                  state != EntityState.T_END_OF_STREAM;
                  state = stream.next()) {
 
-                boolean multipartStarted = false;
-                boolean messageStarted=false;
-                
                 switch (state) {
                     case T_BODY:
-                    case T_START_MULTIPART:
-                        if (partTree == null) {
-                            partTree = new Tree<>(stream.getBodyDescriptor());
+                        if (currentBodyStructure instanceof SingleBodyStructure) {
+                            ((SingleBodyStructure)currentBodyStructure).setSize(stream.getBodyDescriptor().getContentLength());
                         }
-                        
-                        if (partTree != null) {
-                            
-                        }
+                        System.out.println(currentBodyStructure.serialize());
                         break;
+                    case T_END_MULTIPART:
+                        break;
+                        
                     case T_START_MESSAGE:
                         System.out.println("message start");
+                        break;
+                    case T_FIELD:
+                        Field rawField = stream.getField();
+                        ParsedField field = DefaultFieldParser.parse(new String(rawField.getRaw().toByteArray(), "UTF-8"));
+                        if (field instanceof ContentTypeField) {
+                            ContentTypeField contentTypeField = (ContentTypeField) field;
+                            if ( contentTypeField.isMultipart()) {
+
+                                currentBodyStructure = MultipartBodyStructure.builder()
+                                                            .subtype(contentTypeField.getSubType())
+                                                            .parameters(contentTypeField.getParameters())
+                                                            .build();
+                                
+                            }else{
+                                if ("text".equalsIgnoreCase(contentTypeField.getMediaType())) {
+
+                                    currentBodyStructure= new TextBodyStructure(contentTypeField.getMediaType(),
+                                                                contentTypeField.getSubType(), 
+                                                                contentTypeField.getParameters(),
+                                                                null,
+                                                                null,
+                                                                null,
+                                                                null,
+                                                                null);
+                                }else{
+
+                                    currentBodyStructure= new SingleBodyStructure(contentTypeField.getMediaType(),
+                                                              contentTypeField.getSubType(),
+                                                              contentTypeField.getParameters(),
+                                                              null,
+                                                              null,
+                                                              null,
+                                                              null);
+                                }
+                            }
+                                
+                        }
+                        break;
+
                 }
             }
         } catch (IOException e) {
