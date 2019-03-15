@@ -20,21 +20,21 @@ public class MultipartBodyStructure implements BodyStructure {
     @Override
     public String serialize() {
         StringJoiner joiner = new StringJoiner(" ");
-        return joiner.add(nil(listSerialize(this.parts)))
-                     .add(nil(this.subtype))
-                     .add(nil(paramListSerialize(this.parameters)))
-                     .add(nil(this.disposition))
-                     .add(nil(this.language))
-                     .add(nil(this.location))
-                     .toString();
+        StringJoiner string = joiner.add(nil(listSerialize(this.parts)))
+                .add(parenthesis(nil(this.subtype)))
+                .add(nil(paramListSerialize(this.parameters)))
+                .add(nil(this.disposition))
+                .add(nil(this.language))
+                .add(nil(this.location));
+        return "(" +string.toString()+")";
     }
 
     @Override
     public String bodySerialize() {
         StringJoiner joiner = new StringJoiner(" ");
-        return joiner.add(nil(listSerialize(this.parts)))
-                     .add(nil(this.subtype))
-                     .add(nil(paramListSerialize(this.parameters)))
-                     .toString();
+        StringJoiner string = joiner.add(nil(listSerialize(this.parts)))
+                .add(nil(this.subtype))
+                .add(nil(paramListSerialize(this.parameters)));
+        return "("+string.toString()+")";
     }
 }

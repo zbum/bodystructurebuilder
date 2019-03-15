@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="654bbc9f-27ff-4df7-bf69-83f2af7c7037" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Rfc822BodyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/eml/multipart_report.bodystructure" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,26 +34,45 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="toast_iam@10.162.3.189 (dev)" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="toast_iam@10.162.3.189 (dev)" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#766#797#0" expanded="true" />
+                <element signature="e#1317#1318#0" expanded="true" />
+                <element signature="e#1351#1352#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="467">
+              <caret line="92" column="53" lean-forward="true" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,16 +81,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
+            <state relative-caret-position="210">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/field/ContentTransferEncodingField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/field/ContentTypeField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1065">
+              <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#1260#1261#0" expanded="true" />
+                <element signature="e#492#523#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="555">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,19 +133,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/MimeTokenStream.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Rfc822BodyStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="343" column="26" selection-start-line="343" selection-start-column="26" selection-end-line="343" selection-end-column="26" />
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
-                <element signature="e#4236#4237#0" expanded="true" />
-                <element signature="e#4262#4263#0" expanded="true" />
-                <element signature="e#9262#9263#0" expanded="true" />
-                <element signature="e#9298#9299#0" expanded="true" />
-                <element signature="e#13316#13317#0" expanded="true" />
-                <element signature="e#13378#13379#0" expanded="true" />
-                <element signature="e#13688#13689#0" expanded="true" />
-                <element signature="e#13741#13742#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,11 +192,12 @@
         <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructureNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructureNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructureNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/eml/multipart_report.bodystructure" />
         <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java" />
         <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java" />
       </list>
     </option>
   </component>
@@ -167,11 +211,10 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1440" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1177" />
+    <option name="width" value="1280" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -179,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,126 +301,18 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="eml" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-core:0.8.2" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-core:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-core-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-core:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-core-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-core:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-core-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="stream" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-core:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-core-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="dom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="dom" type="462c0819:PsiDirectoryNode" />
-              <item name="field" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="field" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.james:apache-mime4j-dom:0.8.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="apache-mime4j-dom-0.8.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="mime4j" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
-              <item name="lombok-1.18.6.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bodystructurebuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.projectlombok:lombok:1.18.6" type="70bed36:NamedLibraryElementNode" />
-              <item name="lombok-1.18.6.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="lombok" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552636844114" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552651309306" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -388,11 +324,11 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="kr.co.manty.mail.imap" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="kr.co.manty.mail.imap.model" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kr.co.manty.mail.imap.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/eml" />
@@ -534,9 +470,9 @@
   <component name="SbtLocalSettings">
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../../dooray/smtp" value="1487829504000" />
-        <entry key="$PROJECT_DIR$/../../playground/example" value="1459487574000" />
-        <entry key="$PROJECT_DIR$/../../playground/recfun" value="1462340330000" />
+        <entry key="$USER_HOME$/dooray/smtp" value="1487829504000" />
+        <entry key="$USER_HOME$/playground/example" value="1459487574000" />
+        <entry key="$USER_HOME$/playground/recfun" value="1462340330000" />
       </map>
     </option>
   </component>
@@ -552,86 +488,135 @@
       <updated>1552284671069</updated>
       <workItem from="1552284672945" duration="8648000" />
       <workItem from="1552540624295" duration="17650000" />
+      <workItem from="1552642483163" duration="4273000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 12h 44m 19s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 46m 08s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 12h 45m 39s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 48m 11s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 13h 58m 31s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 51m 46s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 13h 58m 45s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 56m 13s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 15h 50m 45s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 57m 46s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 15h 51m 49s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 58m 20s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 15h 52m 50s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 20h 58m 46s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 15h 53m 03s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 21h 00m 12s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 15h 53m 14s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 21h 00m 39s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 16h 19m 42s.xml">
+    <history-entry file="BodyStructureBuilderTest_buildMultipartReport - 2019.03.15 at 21h 01m 22s.xml">
       <configuration name="BodyStructureBuilderTest.buildMultipartReport" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26298000" />
+    <option name="totallyTimeSpent" value="30571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="1177" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.25346112" />
+      <window_info content_ui="combo" id="Project" order="4" weight="0.5193861" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32903227" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32830188" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tool Output" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32656828" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32603773" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="ANTLR Preview" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.45069125" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.45056602" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.39723504" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39698112" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Remote Host" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="Database" order="4" weight="0.549273" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
       <window_info anchor="right" id="Commander" order="8" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3297568" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.5193861" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32830188" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="2" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32603773" />
+      <window_info anchor="bottom" id="Database Changes" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.45056602" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39698112" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Remote Host" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.549273" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Commander" order="8" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3297568" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2.jar!/org/apache/james/mime4j/dom/Message.class">
@@ -673,17 +658,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
-          <folding>
-            <element signature="e#2838#2839#0" expanded="true" />
-            <element signature="e#2872#2873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/Stack.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/RecursionMode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -710,58 +685,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="122" column="11" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
-          <folding>
-            <element signature="e#4697#4698#0" expanded="true" />
-            <element signature="e#4742#4743#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/multipart_report.eml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar!/lombok/var.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/var.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/field/ContentTypeField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/TreeSet.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar!/lombok/var.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/var.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/util/ByteSequence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
@@ -783,73 +709,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/Builder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="114" column="18" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/AllArgsConstructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Rfc822BodyStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/Builder.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.6/lombok-1.18.6-sources.jar!/lombok/AllArgsConstructor.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/message/DefaultBodyDescriptorBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -895,19 +756,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-core/0.8.2/apache-mime4j-core-0.8.2-sources.jar!/org/apache/james/mime4j/stream/MimeTokenStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="4440">
           <caret line="343" column="26" selection-start-line="343" selection-start-column="26" selection-end-line="343" selection-end-column="26" />
           <folding>
             <element signature="e#4236#4237#0" expanded="true" />
@@ -922,10 +773,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/multipart_report.eml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/eml/multipart_report.bodystructure">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Rfc822BodyStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/BodyStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/MultipartBodyStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/field/ContentTypeField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/james/apache-mime4j-dom/0.8.2/apache-mime4j-dom-0.8.2-sources.jar!/org/apache/james/mime4j/dom/field/ContentTransferEncodingField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/TextBodyStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#492#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/SingleBodyStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#766#797#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="467">
+          <caret line="92" column="53" lean-forward="true" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

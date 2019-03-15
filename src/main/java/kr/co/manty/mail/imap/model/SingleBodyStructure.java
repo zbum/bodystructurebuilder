@@ -25,17 +25,18 @@ public class SingleBodyStructure implements BodyStructure {
         this.size = size;
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public String serialize() {
         StringJoiner joiner = new StringJoiner(" ");
-        return joiner.add(nil(this.getType()))
-                     .add(nil(this.getSubtype()))
-                     .add(nil(paramListSerialize(this.getParameters())))
-                     .add(nil(this.getId()))
-                     .add(nil(this.getDescription()))
-                     .add(nil(this.getEncoding()))
-                     .add(nil(this.getSize()))
-                     .toString();
+        StringJoiner string = joiner.add(parenthesis(nil(this.getType())))
+                .add(parenthesis(nil(this.getSubtype())))
+                .add(nil(paramListSerialize(this.getParameters())))
+                .add(parenthesis(nil(this.getId())))
+                .add(parenthesis(nil(this.getDescription())))
+                .add(parenthesis(nil(this.getEncoding())))
+                .add(nil(this.getSize()));
+        return "("+string.toString()+")";
     }
 
     @Override

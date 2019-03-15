@@ -4,14 +4,17 @@ import kr.co.manty.mail.imap.model.BodyStructure;
 import kr.co.manty.mail.imap.model.MultipartBodyStructure;
 import kr.co.manty.mail.imap.model.SingleBodyStructure;
 import kr.co.manty.mail.imap.model.TextBodyStructure;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.apache.james.mime4j.MimeException;
+import org.apache.james.mime4j.dom.field.ContentTransferEncodingField;
 import org.apache.james.mime4j.dom.field.ContentTypeField;
 import org.apache.james.mime4j.dom.field.ParsedField;
 import org.apache.james.mime4j.field.DefaultFieldParser;
 import org.apache.james.mime4j.stream.*;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.util.LinkedList;
 
 public class BodyStructureBuilder {
 
@@ -20,7 +23,8 @@ public class BodyStructureBuilder {
     }
 
     public static String build(InputStream mimeInputStream) {
-        BodyStructure currentBodyStructure = null;
+        MultipartBodyStructure previous = null;
+        SingleBodyStructure currentBodyStructure = null;
 
         MimeTokenStream stream = new MimeTokenStream();
         try (InputStream inputStream = mimeInputStream) {
@@ -31,14 +35,19 @@ public class BodyStructureBuilder {
 
                 switch (state) {
                     case T_BODY:
-                        if (currentBodyStructure instanceof SingleBodyStructure) {
-                            ((SingleBodyStructure)currentBodyStructure).setSize(stream.getBodyDescriptor().getContentLength());
+                        if (currentBodyStructure == null) break;
+
+                        StreamAttribute streamAttribute = getStreamAttribute(stream.getInputStream());
+                        currentBodyStructure.setSize(streamAttribute.size);
+                        if (currentBodyStructure instanceof TextBodyStructure) {
+                            ((TextBodyStructure) currentBodyStructure).setLine(streamAttribute.line);
                         }
-                        System.out.println(currentBodyStructure.serialize());
+
                         break;
                     case T_END_MULTIPART:
+                        System.out.println(previous.serialize());
                         break;
-                        
+
                     case T_START_MESSAGE:
                         System.out.println("message start");
                         break;
@@ -47,36 +56,41 @@ public class BodyStructureBuilder {
                         ParsedField field = DefaultFieldParser.parse(new String(rawField.getRaw().toByteArray(), "UTF-8"));
                         if (field instanceof ContentTypeField) {
                             ContentTypeField contentTypeField = (ContentTypeField) field;
-                            if ( contentTypeField.isMultipart()) {
+                            if (contentTypeField.isMultipart()) {
 
-                                currentBodyStructure = MultipartBodyStructure.builder()
-                                                            .subtype(contentTypeField.getSubType())
-                                                            .parameters(contentTypeField.getParameters())
-                                                            .build();
-                                
-                            }else{
+                                previous = MultipartBodyStructure.builder()
+                                        .parts(new LinkedList<>())
+                                        .subtype(contentTypeField.getSubType())
+                                        .parameters(contentTypeField.getParameters())
+                                        .build();
+
+                            } else {
                                 if ("text".equalsIgnoreCase(contentTypeField.getMediaType())) {
-
-                                    currentBodyStructure= new TextBodyStructure(contentTypeField.getMediaType(),
-                                                                contentTypeField.getSubType(), 
-                                                                contentTypeField.getParameters(),
-                                                                null,
-                                                                null,
-                                                                null,
-                                                                null,
-                                                                null);
-                                }else{
-
-                                    currentBodyStructure= new SingleBodyStructure(contentTypeField.getMediaType(),
-                                                              contentTypeField.getSubType(),
-                                                              contentTypeField.getParameters(),
-                                                              null,
-                                                              null,
-                                                              null,
-                                                              null);
+                                    currentBodyStructure = new TextBodyStructure(contentTypeField.getMediaType(),
+                                            contentTypeField.getSubType(),
+                                            contentTypeField.getParameters(),
+                                            null,
+                                            null,
+                                            null,
+                                            null,
+                                            null);
+                                } else {
+                                    currentBodyStructure = new SingleBodyStructure(contentTypeField.getMediaType(),
+                                            contentTypeField.getSubType(),
+                                            contentTypeField.getParameters(),
+                                            null,
+                                            null,
+                                            null,
+                                            null);
+                                }
+                                if (previous != null) {
+                                    previous.getParts().add(currentBodyStructure);
                                 }
                             }
-                                
+                        }
+
+                        if (field instanceof ContentTransferEncodingField) {
+                            currentBodyStructure.setEncoding(((ContentTransferEncodingField) field).getEncoding());
                         }
                         break;
 
@@ -92,4 +106,31 @@ public class BodyStructureBuilder {
         return "";
 
     }
+
+    private static StreamAttribute getStreamAttribute(InputStream inputStream) {
+        long size = 0;
+        long line = 1;
+        int ch;
+        while (true) {
+            try {
+                if (!((ch = inputStream.read()) != -1)) break;
+            } catch (IOException e) {
+                return null;
+            }
+            if (ch == '\n') {
+                line++;
+            }
+            size++;
+        }
+
+        return new StreamAttribute(size, line);
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class StreamAttribute {
+        private long size;
+        private long line;
+    }
+
 }

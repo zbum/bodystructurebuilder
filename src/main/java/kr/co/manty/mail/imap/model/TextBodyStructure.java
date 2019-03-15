@@ -1,9 +1,11 @@
 package kr.co.manty.mail.imap.model;
 
+import lombok.Data;
+
 import java.util.Map;
 import java.util.StringJoiner;
 
-
+@Data
 public class TextBodyStructure extends SingleBodyStructure {
     private Long line;
 
@@ -13,10 +15,17 @@ public class TextBodyStructure extends SingleBodyStructure {
     }
 
     @Override
+    @SuppressWarnings("Duplicates")
     public String serialize() {
         StringJoiner joiner = new StringJoiner(" ");
-        return joiner.add(super.serialize())
-                     .add(nil(this.line))
-                     .toString();
+        StringJoiner string = joiner.add(parenthesis(nil(this.getType())))
+                .add(parenthesis(nil(this.getSubtype())))
+                .add(nil(paramListSerialize(this.getParameters())))
+                .add(parenthesis(nil(this.getId())))
+                .add(parenthesis(nil(this.getDescription())))
+                .add(parenthesis(nil(this.getEncoding())))
+                .add(nil(this.getSize()))
+                .add(nil(this.line));
+        return "("+string.toString()+")";
     }
 }

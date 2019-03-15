@@ -15,7 +15,6 @@ public interface BodyStructure {
         } else {
             str = list.stream()
                       .map(it -> it.serialize())
-                      .map(it -> "(" + it + ")")
                       .collect(Collectors.joining());
         }
 
@@ -29,7 +28,7 @@ public interface BodyStructure {
         } else {
             parameterStr = "(" +
                 parameters.entrySet().stream()
-                          .map(it -> "\""+it.getKey() + "\" \"" + it.getValue()+"\"")
+                          .map(it -> parenthesis(it.getKey()) + " " + parenthesis(it.getValue()))
                           .collect(Collectors.joining(" "))
                 + ")";
         }
@@ -42,6 +41,12 @@ public interface BodyStructure {
 
     default String nil(Long longValue) {
         return longValue == null ? "NIL" : longValue.toString();
+    }
+
+    default String parenthesis(String value) {
+        if (value==null || "NIL".equals(value)) return value;
+        String replaced = value.replaceAll("\"", "\\\"");
+        return "\""+replaced+"\"";
     }
 
 }
