@@ -1,9 +1,7 @@
-package kr.co.manty.mail.imap.bodystructure.envelope;
+package kr.co.manty.mail.imap.envelope;
 
 
-import kr.co.manty.mail.imap.bodystructure.FetchResponse;
-
-final class EnvelopeImpl implements FetchResponse.Envelope {
+final class EnvelopeImpl implements Envelope {
 
     private final Address[] bcc;
 

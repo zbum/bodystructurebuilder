@@ -1,5 +1,6 @@
-package kr.co.manty.mail.imap.bodystructure;
+package kr.co.manty.mail.imap.bodystructure.mime;
 
+import kr.co.manty.mail.imap.Header;
 import kr.co.manty.mail.imap.bodystructure.utils.CountingInputStream;
 import org.apache.james.mime4j.MimeException;
 import org.apache.james.mime4j.message.DefaultBodyDescriptorBuilder;
@@ -13,11 +14,12 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class MimeDescriptorImpl implements MimeDescriptor {
 
-    private static final Charset US_ASCII = Charset.forName("US-ASCII");
+    private static final Charset US_ASCII = StandardCharsets.US_ASCII;
 
     /**
      * Is this a composite media type (as per RFC2045)?
@@ -47,7 +49,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     private static MimeDescriptorImpl createDescriptor(
             final MimeTokenStream parser) throws IOException, MimeException {
         EntityState next = parser.next();
-        final Collection<MessageResult.Header> headers = new ArrayList<>();
+        final Collection<Header> headers = new ArrayList<>();
         while (next != EntityState.T_BODY
                 && next != EntityState.T_END_OF_STREAM
                 && next != EntityState.T_START_MULTIPART) {
@@ -75,7 +77,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     }
 
     private static MimeDescriptorImpl compositePartDescriptor(
-            final MimeTokenStream parser, Collection<MessageResult.Header> headers)
+            final MimeTokenStream parser, Collection<Header> headers)
             throws IOException, MimeException {
         MaximalBodyDescriptor descriptor = (MaximalBodyDescriptor) parser
                 .getBodyDescriptor();
@@ -93,7 +95,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     }
 
     private static MimeDescriptorImpl simplePartDescriptor(
-            final MimeTokenStream parser, Collection<MessageResult.Header> headers)
+            final MimeTokenStream parser, Collection<Header> headers)
             throws IOException, MimeException {
         MaximalBodyDescriptor descriptor = (MaximalBodyDescriptor) parser
                 .getBodyDescriptor();
@@ -127,7 +129,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
 
     private static MimeDescriptorImpl createDescriptor(long bodyOctets,
                                                        long lines, MaximalBodyDescriptor descriptor,
-                                                       MimeDescriptor embeddedMessage, Collection<MessageResult.Header> headers) {
+                                                       MimeDescriptor embeddedMessage, Collection<Header> headers) {
         final String contentDescription = descriptor.getContentDescription();
         final String contentId = descriptor.getContentId();
 
@@ -178,7 +180,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
 
     private final List<String> languages;
 
-    private final Collection<MessageResult.Header> headers;
+    private final Collection<Header> headers;
 
     private final Map<String, String> contentTypeParameters;
 
@@ -198,7 +200,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     public MimeDescriptorImpl(long bodyOctets,
                               String contentDescription, String contentId,
                               long lines, String subType, String type,
-                              String transferEncoding, Collection<MessageResult.Header> headers,
+                              String transferEncoding, Collection<Header> headers,
                               Map<String, String> contentTypeParameters, List<String> languages,
                               String disposition, Map<String, String> dispositionParams,
                               MimeDescriptor embeddedMessage, Collection<MimeDescriptor> parts,
@@ -268,7 +270,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     }
 
     @Override
-    public Iterator<MessageResult.Header> headers() {
+    public Iterator<Header> headers() {
         return headers.iterator();
     }
 
@@ -309,9 +311,9 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     @Override
     public InputStream getInputStream() throws IOException {
         StringBuilder sb = new StringBuilder();
-        Iterator<MessageResult.Header> hIt = headers.iterator();
+        Iterator<Header> hIt = headers.iterator();
         while (hIt.hasNext()) {
-            MessageResult.Header header = hIt.next();
+            Header header = hIt.next();
             sb.append(header.getName()).append(": ").append(header.getValue()).append("\r\n");
         }
         sb.append("\r\n");
@@ -321,7 +323,7 @@ public class MimeDescriptorImpl implements MimeDescriptor {
     @Override
     public long size() {
         long result = 0;
-        for (MessageResult.Header header : headers) {
+        for (Header header : headers) {
             if (header != null) {
                 result += header.size();
                 result += 2;

@@ -5,13 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import kr.co.manty.mail.imap.bodystructure.envelope.EnvelopeBuilder;
+import kr.co.manty.mail.imap.bodystructure.mime.MimeDescriptor;
+import kr.co.manty.mail.imap.envelope.Envelope;
+import kr.co.manty.mail.imap.envelope.EnvelopeBuilder;
 import lombok.ToString;
-import kr.co.manty.mail.imap.bodystructure.FetchResponse.Structure;
-import kr.co.manty.mail.imap.bodystructure.FetchResponse.Envelope;
 
 @ToString(callSuper = true)
-final class MimeDescriptorStructure implements FetchResponse.Structure {
+final class MimeDescriptorStructure implements Structure {
 
     private final MimeDescriptor descriptor;
 

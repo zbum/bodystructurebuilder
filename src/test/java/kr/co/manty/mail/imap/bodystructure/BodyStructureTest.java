@@ -18,7 +18,6 @@ public class BodyStructureTest {
         byte[] actual = BodyStructureBuilder.build(mimeInputStream);
 
         assertThat(actual, is(IOUtils.toByteArray(expectInputStream)));
-
     }
 
     @Test

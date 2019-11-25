@@ -1,6 +1,8 @@
 package kr.co.manty.mail.imap.bodystructure;
 
-import kr.co.manty.mail.imap.bodystructure.envelope.EnvelopeBuilder;
+import kr.co.manty.mail.imap.bodystructure.mime.MimeDescriptor;
+import kr.co.manty.mail.imap.bodystructure.mime.MimeDescriptorImpl;
+import kr.co.manty.mail.imap.envelope.EnvelopeBuilder;
 import lombok.experimental.UtilityClass;
 
 import java.io.ByteArrayOutputStream;

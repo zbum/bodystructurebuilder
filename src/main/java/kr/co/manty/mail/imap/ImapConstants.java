@@ -1,4 +1,4 @@
-package kr.co.manty.mail.imap.bodystructure;
+package kr.co.manty.mail.imap;
 
 public interface ImapConstants {
     // Basic response types

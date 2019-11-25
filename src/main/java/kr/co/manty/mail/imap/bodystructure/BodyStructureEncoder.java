@@ -1,16 +1,18 @@
 package kr.co.manty.mail.imap.bodystructure;
 
+import kr.co.manty.mail.imap.ImapConstants;
+import kr.co.manty.mail.imap.envelope.Envelope;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.util.*;
 
 @Slf4j
-public class BodyStructureEncoder {
+class BodyStructureEncoder {
 
     static final String ENVELOPE = "ENVELOPE";
 
-    void encodeStructure(ImapResponseComposer composer, FetchResponse.Structure structure, boolean includeExtensions, boolean isInnerPart) throws IOException {
+    void encodeStructure(ImapResponseComposer composer, Structure structure, boolean includeExtensions, boolean isInnerPart) throws IOException {
 
         final String mediaType;
         final String subType;
@@ -25,7 +27,7 @@ public class BodyStructureEncoder {
         encodeStructure(composer, structure, includeExtensions, mediaType, subType, isInnerPart);
     }
 
-    private void encodeStructure(ImapResponseComposer composer, FetchResponse.Structure structure, boolean includeExtensions, String mediaType, String subType, boolean isInnerPart) throws IOException {
+    private void encodeStructure(ImapResponseComposer composer, Structure structure, boolean includeExtensions, String mediaType, String subType, boolean isInnerPart) throws IOException {
         //
         // Workaround for broken clients
         // See IMAP-91
@@ -47,7 +49,7 @@ public class BodyStructureEncoder {
         }
     }
 
-    private void encodeBasic(ImapResponseComposer composer, FetchResponse.Structure structure, boolean includeExtensions, String mediaType, String subType) throws IOException {
+    private void encodeBasic(ImapResponseComposer composer, Structure structure, boolean includeExtensions, String mediaType, String subType) throws IOException {
         if (ImapConstants.MIME_TYPE_TEXT.equalsIgnoreCase(mediaType)) {
 
             final long lines = structure.getLines();
@@ -63,7 +65,7 @@ public class BodyStructureEncoder {
         composer.closeParen();
     }
 
-    private void encodeOnePartBodyExtensions(ImapResponseComposer composer, FetchResponse.Structure structure) throws IOException {
+    private void encodeOnePartBodyExtensions(ImapResponseComposer composer, Structure structure) throws IOException {
         final String md5 = structure.getMD5();
         final List<String> languages = structure.getLanguages();
         final String location = structure.getLocation();
@@ -73,7 +75,7 @@ public class BodyStructureEncoder {
         nillableQuote(composer, location);
     }
 
-    private ImapResponseComposer bodyFldDsp(FetchResponse.Structure structure, ImapResponseComposer composer) throws IOException {
+    private ImapResponseComposer bodyFldDsp(Structure structure, ImapResponseComposer composer) throws IOException {
         final String disposition = structure.getDisposition();
         if (disposition == null) {
             composer.nil();
@@ -108,7 +110,7 @@ public class BodyStructureEncoder {
         }
     }
 
-    private void encodeBodyFields(ImapResponseComposer composer, FetchResponse.Structure structure, String mediaType, String subType) throws IOException {
+    private void encodeBodyFields(ImapResponseComposer composer, Structure structure, String mediaType, String subType) throws IOException {
         final List<String> bodyParams = structure.getParameters();
         final String id = structure.getId();
         final String description = structure.getDescription();
@@ -121,11 +123,11 @@ public class BodyStructureEncoder {
         composer.quoteUpperCaseAscii(encoding).message(octets);
     }
 
-    private void encodeMultipart(ImapResponseComposer composer, FetchResponse.Structure structure, String subType, boolean includeExtensions) throws IOException {
+    private void encodeMultipart(ImapResponseComposer composer, Structure structure, String subType, boolean includeExtensions) throws IOException {
         composer.openParen();
 
-        for (Iterator<FetchResponse.Structure> it = structure.parts(); it.hasNext();) {
-            final FetchResponse.Structure part = it.next();
+        for (Iterator<Structure> it = structure.parts(); it.hasNext();) {
+            final Structure part = it.next();
             encodeStructure(composer, part, includeExtensions, true);
         }
 
@@ -140,10 +142,10 @@ public class BodyStructureEncoder {
         composer.closeParen();
     }
 
-    private void encodeRfc822Message(ImapResponseComposer composer, FetchResponse.Structure structure, String mediaType, String subType, boolean includeExtensions) throws IOException {
+    private void encodeRfc822Message(ImapResponseComposer composer, Structure structure, String mediaType, String subType, boolean includeExtensions) throws IOException {
         final long lines = structure.getLines();
-        final FetchResponse.Envelope envelope = structure.getEnvelope();
-        final FetchResponse.Structure embeddedStructure = structure.getBody();
+        final Envelope envelope = structure.getEnvelope();
+        final Structure embeddedStructure = structure.getBody();
 
         encodeBodyFields(composer, structure, mediaType, subType);
         encodeEnvelope(composer, envelope, false);
@@ -158,16 +160,16 @@ public class BodyStructureEncoder {
 
 
 
-    private void encodeEnvelope(ImapResponseComposer composer, FetchResponse.Envelope envelope, boolean prefixWithName) throws IOException {
+    private void encodeEnvelope(ImapResponseComposer composer, Envelope envelope, boolean prefixWithName) throws IOException {
         if (envelope != null) {
             final String date = envelope.getDate();
             final String subject = envelope.getSubject();
-            final FetchResponse.Envelope.Address[] from = envelope.getFrom();
-            final FetchResponse.Envelope.Address[] sender = envelope.getSender();
-            final FetchResponse.Envelope.Address[] replyTo = envelope.getReplyTo();
-            final FetchResponse.Envelope.Address[] to = envelope.getTo();
-            final FetchResponse.Envelope.Address[] cc = envelope.getCc();
-            final FetchResponse.Envelope.Address[] bcc = envelope.getBcc();
+            final Envelope.Address[] from = envelope.getFrom();
+            final Envelope.Address[] sender = envelope.getSender();
+            final Envelope.Address[] replyTo = envelope.getReplyTo();
+            final Envelope.Address[] to = envelope.getTo();
+            final Envelope.Address[] cc = envelope.getCc();
+            final Envelope.Address[] bcc = envelope.getBcc();
             final String inReplyTo = envelope.getInReplyTo();
             final String messageId = envelope.getMessageId();
 
@@ -190,19 +192,19 @@ public class BodyStructureEncoder {
         }
     }
 
-    private void encodeAddresses(ImapResponseComposer composer, FetchResponse.Envelope.Address[] addresses) throws IOException {
+    private void encodeAddresses(ImapResponseComposer composer, Envelope.Address[] addresses) throws IOException {
         if (addresses == null || addresses.length == 0) {
             composer.nil();
         } else {
             composer.openParen();
-            for (FetchResponse.Envelope.Address address : addresses) {
+            for (Envelope.Address address : addresses) {
                 encodeAddress(composer, address);
             }
             composer.closeParen();
         }
     }
 
-    private void encodeAddress(ImapResponseComposer composer, FetchResponse.Envelope.Address address) throws IOException {
+    private void encodeAddress(ImapResponseComposer composer, Envelope.Address address) throws IOException {
         final String name = address.getPersonalName();
         final String domainList = address.getAtDomainList();
         final String mailbox = address.getMailboxName();
@@ -214,8 +216,6 @@ public class BodyStructureEncoder {
         nillableQuote(composer,host).closeParen();
     }
 
-
-
     private ImapResponseComposer nillableQuote(ImapResponseComposer composer, String message) throws IOException {
         if (message == null) {
             composer.nil();
@@ -224,7 +224,6 @@ public class BodyStructureEncoder {
         }
         return composer;
     }
-
 
     private ImapResponseComposer nillableQuotes(ImapResponseComposer composer, List<String> quotes) throws IOException {
         if (quotes == null || quotes.isEmpty()) {

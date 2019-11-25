@@ -1,17 +1,14 @@
 package kr.co.manty.mail.imap.bodystructure;
 
+import kr.co.manty.mail.imap.ImapConstants;
 import kr.co.manty.mail.imap.bodystructure.utils.FastByteArrayOutputStream;
 
-import javax.mail.Flags;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-public class BodyStructureComposer implements ImapConstants, ImapResponseComposer {
+class BodyStructureComposer implements ImapConstants, ImapResponseComposer {
 
-    public static final String FLAGS = "FLAGS";
-
-    public static final String FAILED = "failed.";
     private static final int LOWER_CASE_OFFSET = 'a' - 'A';
     public static final int DEFAULT_BUFFER_SIZE = 2048;
 
@@ -36,48 +33,6 @@ public class BodyStructureComposer implements ImapConstants, ImapResponseCompose
     }
 
     @Override
-    public ImapResponseComposer untaggedNoResponse(String displayMessage, String responseCode) throws IOException {
-        untagged();
-        message(NO);
-        responseCode(responseCode);
-        message(displayMessage);
-        end();
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer continuationResponse(String message) throws IOException {
-        writeASCII(CONTINUATION + SP + message);
-        end();
-        return this;
-    }
-
-
-
-    @Override
-    public ImapResponseComposer taggedResponse(String message, String tag) throws IOException {
-        tag(tag);
-        message(message);
-        end();
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer untaggedResponse(String message) throws IOException {
-        untagged();
-        message(message);
-        end();
-        return this;
-    }
-
-
-    @Override
-    public ImapResponseComposer untagged() throws IOException {
-        writeASCII(UNTAGGED);
-        return this;
-    }
-
-    @Override
     public ImapResponseComposer message(String message) throws IOException {
         if (message != null) {
             // TODO: consider message normalisation
@@ -90,24 +45,10 @@ public class BodyStructureComposer implements ImapConstants, ImapResponseCompose
         return this;
     }
 
-    private void responseCode(String responseCode) throws IOException {
-        if (responseCode != null && !"".equals(responseCode)) {
-            writeASCII(" [");
-            writeASCII(responseCode);
-            buffer.write(BYTE_CLOSE_SQUARE_BRACKET);
-        }
-    }
-
     @Override
     public ImapResponseComposer end() throws IOException {
         writer.write(buffer.toByteArray());
         buffer.reset();
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer tag(String tag) throws IOException {
-        writeASCII(tag);
         return this;
     }
 
@@ -123,50 +64,11 @@ public class BodyStructureComposer implements ImapConstants, ImapResponseCompose
         return this;
     }
 
-    @Override
-    public ImapResponseComposer flags(Flags flags) throws IOException {
-        message(FLAGS);
-        openParen();
-        if (flags.contains(Flags.Flag.ANSWERED)) {
-            message("\\Answered");
-        }
-        if (flags.contains(Flags.Flag.DELETED)) {
-            message("\\Deleted");
-        }
-        if (flags.contains(Flags.Flag.DRAFT)) {
-            message("\\Draft");
-        }
-        if (flags.contains(Flags.Flag.FLAGGED)) {
-            message("\\Flagged");
-        }
-        if (flags.contains(Flags.Flag.RECENT)) {
-            message("\\Recent");
-        }
-        if (flags.contains(Flags.Flag.SEEN)) {
-            message("\\Seen");
-        }
 
-        String[] userFlags = flags.getUserFlags();
-        for (String userFlag : userFlags) {
-            message(userFlag);
-        }
-        closeParen();
-        return this;
-    }
 
     @Override
     public ImapResponseComposer nil() throws IOException {
         message(NIL);
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer upperCaseAscii(String message) throws IOException {
-        if (message == null) {
-            nil();
-        } else {
-            upperCaseAscii(message, false);
-        }
         return this;
     }
 
@@ -189,13 +91,6 @@ public class BodyStructureComposer implements ImapConstants, ImapResponseCompose
     public ImapResponseComposer message(long number) throws IOException {
         space();
         writeASCII(Long.toString(number));
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer commandName(String commandName) throws IOException {
-        space();
-        writeASCII(commandName);
         return this;
     }
 
@@ -249,32 +144,6 @@ public class BodyStructureComposer implements ImapConstants, ImapResponseCompose
         } else {
             buffer.write(SP.getBytes());
         }
-    }
-
-    @Override
-    public ImapResponseComposer literal(Literal literal) throws IOException {
-        space();
-        buffer.write(BYTE_OPEN_BRACE);
-        final long size = literal.size();
-        writeASCII(Long.toString(size));
-        buffer.write(BYTE_CLOSE_BRACE);
-        end();
-        if (size > 0) {
-            writer.write(literal);
-        }
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer closeSquareBracket() throws IOException {
-        closeBracket(BYTE_CLOSE_SQUARE_BRACKET);
-        return this;
-    }
-
-    @Override
-    public ImapResponseComposer openSquareBracket() throws IOException {
-        openBracket(BYTE_OPEN_SQUARE_BRACKET);
-        return this;
     }
 
     private void upperCaseAscii(String message, boolean quote) throws IOException {

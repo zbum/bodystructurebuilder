@@ -1,4 +1,4 @@
-package kr.co.manty.mail.imap.bodystructure;
+package kr.co.manty.mail.imap;
 
 
 import java.io.IOException;

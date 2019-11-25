@@ -6,7 +6,11 @@
 
     <groupId>kr.co.manty.mail.imap</groupId>
     <artifactId>bodystructurebuilder</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -52,6 +56,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>

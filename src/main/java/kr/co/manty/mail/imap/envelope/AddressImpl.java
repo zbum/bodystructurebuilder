@@ -1,8 +1,6 @@
-package kr.co.manty.mail.imap.bodystructure.envelope;
+package kr.co.manty.mail.imap.envelope;
 
-import kr.co.manty.mail.imap.bodystructure.FetchResponse;
-
-final class AddressImpl implements FetchResponse.Envelope.Address {
+final class AddressImpl implements Envelope.Address {
     private final String atDomainList;
 
     private final String hostName;
