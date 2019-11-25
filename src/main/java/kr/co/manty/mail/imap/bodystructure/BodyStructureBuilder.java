@@ -1,15 +1,12 @@
 package kr.co.manty.mail.imap.bodystructure;
 
-import org.apache.james.imap.decode.main.OutputStreamImapResponseWriter;
-import org.apache.james.imap.encode.ImapResponseComposer;
-import org.apache.james.imap.encode.base.ImapResponseComposerImpl;
-import org.apache.james.imap.processor.fetch.EnvelopeBuilder;
-import org.apache.james.mailbox.model.MimeDescriptor;
-import org.apache.james.mailbox.store.MimeDescriptorImpl;
+import kr.co.manty.mail.imap.bodystructure.envelope.EnvelopeBuilder;
+import lombok.experimental.UtilityClass;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
+@UtilityClass
 public class BodyStructureBuilder {
 
     public static byte[] build(InputStream mimeInputStream) {

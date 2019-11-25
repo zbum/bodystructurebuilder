@@ -1,20 +1,13 @@
 package kr.co.manty.mail.imap.bodystructure;
 
-import org.apache.james.imap.api.ImapCommand;
-import org.apache.james.imap.api.ImapConstants;
-import org.apache.james.imap.api.display.CharsetUtil;
-import org.apache.james.imap.api.message.IdRange;
-import org.apache.james.imap.api.message.UidRange;
-import org.apache.james.imap.encode.ImapResponseComposer;
-import org.apache.james.imap.encode.ImapResponseWriter;
-import org.apache.james.imap.message.response.Literal;
-import org.apache.james.protocols.imap.utils.FastByteArrayOutputStream;
+import kr.co.manty.mail.imap.bodystructure.utils.FastByteArrayOutputStream;
 
 import javax.mail.Flags;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
-public class BodyStructureComposer implements org.apache.james.imap.api.ImapConstants, ImapResponseComposer {
+public class BodyStructureComposer implements ImapConstants, ImapResponseComposer {
 
     public static final String FLAGS = "FLAGS";
 
@@ -33,7 +26,7 @@ public class BodyStructureComposer implements org.apache.james.imap.api.ImapCons
 
     public BodyStructureComposer(ImapResponseWriter writer, int bufferSize) {
         skipNextSpace = false;
-        usAscii = Charset.forName("US-ASCII");
+        usAscii = StandardCharsets.US_ASCII;
         this.writer = writer;
         this.buffer = new FastByteArrayOutputStream(bufferSize);
     }
@@ -60,15 +53,6 @@ public class BodyStructureComposer implements org.apache.james.imap.api.ImapCons
     }
 
 
-
-    @Override
-    public ImapResponseComposer commandResponse(ImapCommand command, String message) throws IOException {
-        untagged();
-        commandName(command.getName());
-        message(message);
-        end();
-        return this;
-    }
 
     @Override
     public ImapResponseComposer taggedResponse(String message, String tag) throws IOException {
@@ -209,12 +193,6 @@ public class BodyStructureComposer implements org.apache.james.imap.api.ImapCons
     }
 
     @Override
-    public ImapResponseComposer mailbox(String mailboxName) throws IOException {
-        quote(CharsetUtil.encodeModifiedUTF7(mailboxName));
-        return this;
-    }
-
-    @Override
     public ImapResponseComposer commandName(String commandName) throws IOException {
         space();
         writeASCII(commandName);
@@ -244,7 +222,7 @@ public class BodyStructureComposer implements org.apache.james.imap.api.ImapCons
     }
 
 
-    private void closeBracket(byte bracket) throws IOException {
+    private void closeBracket(byte bracket) {
         buffer.write(bracket);
         clearSkipNextSpace();
     }
@@ -316,32 +294,6 @@ public class BodyStructureComposer implements org.apache.james.imap.api.ImapCons
         if (quote) {
             buffer.write(BYTE_DQUOTE);
         }
-    }
-
-    @Override
-    public ImapResponseComposer sequenceSet(UidRange[] ranges) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < ranges.length; i++) {
-            UidRange range = ranges[i];
-            sb.append(range.getFormattedString());
-            if (i + 1 < ranges.length) {
-                sb.append(",");
-            }
-        }
-        return message(sb.toString());
-    }
-
-    @Override
-    public ImapResponseComposer sequenceSet(IdRange[] ranges) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < ranges.length; i++) {
-            IdRange range = ranges[i];
-            sb.append(range.getFormattedString());
-            if (i + 1 < ranges.length) {
-                sb.append(",");
-            }
-        }
-        return message(sb.toString());
     }
 
 }

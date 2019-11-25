@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8709dff-961b-4409-8219-407e2bbce2ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/nhn.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuildException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureComposer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/bodystructure/BodyStructureTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/result/complex.bodystructure" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/result/multipart_report.bodystructure" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/result/test1.bodystructure" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/emacs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/FetchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Headers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseComposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Literal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MessageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/OutputStreamImapResponseWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ResultHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/AddressImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeBuildException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/MessageResultUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/CountingInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/FastByteArrayOutputStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/BodyStructureBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/model/Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/BodyStructureBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureComposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureComposer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorStructure.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +83,10 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="kr.co.manty.mail.imap.bodystructure" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="kr.co.manty.mail.imap.bodystructure.utils" />
+      <recent name="kr.co.manty.mail.imap.bodystructure" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -99,7 +108,7 @@
       <module name="bodystructurebuilder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.envelope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +123,7 @@
       <module name="bodystructurebuilder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.envelope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,7 +138,7 @@
       <module name="bodystructurebuilder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.envelope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,7 +154,7 @@
       <module name="bodystructurebuilder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.envelope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,7 +170,7 @@
       <module name="bodystructurebuilder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.envelope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,7 +202,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574583324076</updated>
-      <workItem from="1574583325437" duration="12168000" />
+      <workItem from="1574583325437" duration="12495000" />
+      <workItem from="1574645188196" duration="6404000" />
     </task>
     <servers />
   </component>
@@ -205,7 +215,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

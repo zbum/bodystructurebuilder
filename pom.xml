@@ -17,15 +17,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.james</groupId>
-            <artifactId>apache-james-mailbox-store</artifactId>
-            <version>3.4.0</version>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>1.6.4</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.james.protocols</groupId>
-            <artifactId>protocols-imap</artifactId>
-            <version>3.4.0</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.29</version>
         </dependency>
 
         <dependency>

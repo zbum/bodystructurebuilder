@@ -1,8 +1,6 @@
 package kr.co.manty.mail.imap.bodystructure;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.james.imap.encode.ImapResponseComposer;
-import org.apache.james.imap.message.response.FetchResponse;
 
 import java.io.IOException;
 import java.util.*;
@@ -229,7 +227,7 @@ public class BodyStructureEncoder {
 
 
     private ImapResponseComposer nillableQuotes(ImapResponseComposer composer, List<String> quotes) throws IOException {
-        if (quotes == null || quotes.size() == 0) {
+        if (quotes == null || quotes.isEmpty()) {
             composer.nil();
         } else {
             composer.openParen();
