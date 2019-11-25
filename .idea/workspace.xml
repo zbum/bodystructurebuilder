@@ -2,37 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8709dff-961b-4409-8219-407e2bbce2ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Structure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/mime/ResultHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/envelope/Envelope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureComposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureComposer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/FetchResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Headers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/Headers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/ImapConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseComposer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseComposer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ImapResponseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/Literal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MessageResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/mime/MimeDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/mime/MimeDescriptorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/MimeDescriptorStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/OutputStreamImapResponseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/OutputStreamImapResponseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/ResultHeader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/AddressImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/envelope/AddressImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeBuildException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/envelope/EnvelopeBuildException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/envelope/EnvelopeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/EnvelopeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/envelope/EnvelopeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/envelope/MessageResultUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/CountingInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/CountingInputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/FastByteArrayOutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/utils/FastByteArrayOutputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/bodystructure/BodyStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/bodystructure/BodyStructureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0e47ad4916708de02e6c3a15c07bbc8cb14af4cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/125c15d49ec0bb527a9ac10da17c25b0c17ac307" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14bed1ce27322e35de710bfc17160791195b5e43" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/172b4489800c5659d2234e8f864ed1525b127df0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18da26d0b80c4c2aa891cdc82a9eec29673fa52f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/20c49c7829c0aad09f01256d3cf7631fd5b589bf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/212dd9764b83550fa9a7a23d4f40617c4f9ec091" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/285689731796c9bbab929b7e086d81bf8c8d7b7c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29147eace740d89b05892f3820d91126bf738349" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36b114adfe62437a800b087160a88ddae56f7208" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3da01db98b88a8057c03354880f06dba49d3e795" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3df5bb19cf552850b50e5aeed803dd8901f0ba35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/4032e4ef0f8712e43ff2a568e798808b0d0cb7e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c59105aeda5787c48ba4a9edeafdebfef776695" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/56e85d72e47f379c54e690f5b9e7fa8ef20fc06e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e638c8963aa2a0d7a5f0962da391dab2ee8abe6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70f8226ba57512807638c72e855f3aa963312ec3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/779b7b18891d7d8bc11e1bfc3eae6cbb78ddcee3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79d2951d193f1646026c2518732dca0ee9770c71" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a22938cfa1b7d1c6f3ecb823401098c45f726d7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80051c6a9c576ca5c8f1dc6ce95861138fb32c3b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81d9acd408ba66cc284a261c249494537dbe1372" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/849cc5893b607dca3671c1bc68a6c5801be0190a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8ae396f369da14bb5c0973286facff8fb2c70d56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8d0b1d892b58235ee255dcfd527effdb6afc7395" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d6d74267aa38d8c9446370f8e46d04efd84ea6e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a12c084db636c9d7359294457306ff9901a876f3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2ad2d041b3685663d04388f7b013df5891f9305" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a7fa8b0772ec3c4ca9f2834f568ba1e29fe9750f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa2a32018893d6c13f2c81798e3e214fd248df98" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/aeb99ce702dfeae18f7014f72f7292b6782ae565" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c19b7e016e666ebf82af7f05a57e48feb0d98978" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c24b24dc001a5c9f6b909b5743059d483552cf85" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c296fcacfacf778a5fed1950ae718ceb449bb314" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3adee15f2b6c74aad44d5df20a15cdb16eb8514" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7a8e99d9433dd3b303ba57400b9e260b6112330" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/caff2b5af781651ab17eed2b6c68e34986964751" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9dc6d78eecfe7377f0732adf0769216cf9668e3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e21cdce7a59674b0f4ab6982d2500524ef9340c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4aee63c17dd01669f3058426b0d27109c431d53" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9495692ae3638d20b1ba7951622805b523eb6a8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0a275cfdc9ed6b05162e819bdd6a281f4e8e71f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f24617e036672ae74e24a6623d99f2ae7e2ba40a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f60ddc4d55a5fc80c0becc6e66500eea76dd1141" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa0c94abbd865150e111cec7b5bf93e70164bd2f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +237,7 @@
       <updated>1574583324076</updated>
       <workItem from="1574583325437" duration="12495000" />
       <workItem from="1574645188196" duration="6666000" />
-      <workItem from="1574672649999" duration="5393000" />
+      <workItem from="1574672649999" duration="6107000" />
     </task>
     <servers />
   </component>
