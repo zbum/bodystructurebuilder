@@ -11,7 +11,7 @@ import java.io.InputStream;
 @UtilityClass
 public class BodyStructureBuilder {
 
-    public static byte[] build(InputStream mimeInputStream) {
+    public static byte[] build(InputStream mimeInputStream, boolean includeExtension) {
         MimeDescriptor mimeDescriptor;
         try (ByteArrayOutputStream output = new ByteArrayOutputStream()){
             mimeDescriptor = MimeDescriptorImpl.build(mimeInputStream);
@@ -20,7 +20,7 @@ public class BodyStructureBuilder {
 
             OutputStreamImapResponseWriter writer = new OutputStreamImapResponseWriter(output);
             ImapResponseComposer bodyStructureComposer = new BodyStructureComposer(writer);
-            new BodyStructureEncoder().encodeStructure(bodyStructureComposer, mimeDescriptorStructure, true, true);
+            new BodyStructureEncoder().encodeStructure(bodyStructureComposer, mimeDescriptorStructure, includeExtension, true);
             bodyStructureComposer.end();
 
             return output.toByteArray();
