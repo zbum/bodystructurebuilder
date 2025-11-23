@@ -1,0 +1,33 @@
+Date: Mon, 15 Jan 2024 10:30:00 +0900
+From: sender@example.com
+To: recipient@example.com
+Subject: Email with Embedded Image
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_Part_12345_67890"
+
+------=_Part_12345_67890
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Email with Image</h1>
+    <p>This email contains an embedded image:</p>
+    <img src="cid:image001@example.com" alt="Embedded Image">
+</body>
+</html>
+
+------=_Part_12345_67890
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <image001@example.com>
+Content-Disposition: inline; filename="image.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==
+
+------=_Part_12345_67890--
+

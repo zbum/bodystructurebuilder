@@ -1,0 +1,20 @@
+Date: Mon, 15 Jan 2024 10:30:00 +0900
+From: outer@example.com
+To: recipient@example.com
+Subject: Email with Embedded Message
+MIME-Version: 1.0
+Content-Type: message/rfc822
+
+Date: Sun, 14 Jan 2024 15:20:00 +0900
+From: inner@example.com
+To: outer@example.com
+Subject: Original Message
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+This is an embedded message within another message.
+It demonstrates the message/rfc822 MIME type.
+
+Original sender
+

@@ -1,0 +1,1 @@
+("MESSAGE" "RFC822" NIL NIL NIL "7BIT" 317 ("Sun, 14 Jan 2024 15:20:00 +0900" "Original Message" ((NIL NIL "inner" "example.com")) ((NIL NIL "inner" "example.com")) ((NIL NIL "inner" "example.com")) ((NIL NIL "outer" "example.com")) NIL NIL NIL NIL) ("TEXT" "PLAIN" ("charset" "UTF-8") NIL NIL "7BIT" 116 0 NIL NIL NIL NIL) 0 NIL NIL NIL NIL)

@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8709dff-961b-4409-8219-407e2bbce2ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/co/manty/mail/imap/bodystructure/BodyStructureBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/bodystructure/BodyStructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kr/co/manty/mail/imap/bodystructure/BodyStructureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/result/multipart_report.bodystructure" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/result/multipart_report.bodystructure" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +49,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zbum"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zbum/bodystructurebuilder.git",
+    "accountId": "1f2b83a1-8f4e-43b1-a6cf-c9ca920a7397"
+  }
+}]]></component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="dev" />
     <option name="namespace" value="default" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="dekVEXFM" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="1U3RWaR1YY2PBi2oSpyzzRhfwkH" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -64,27 +84,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.BodyStructureTest.executor": "Run",
+    "JUnit.BodyStructureTest.testMultipartMixedMime.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="kr.co.manty.mail.imap.bodystructure" />
@@ -107,7 +127,7 @@
       <recent name="kr.co.manty.mail.imap.bodystructure" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BodyStructureTest.testMultipartReport">
+  <component name="RunManager" selected="JUnit.BodyStructureTest">
     <configuration name="BodyStructureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bodystructurebuilder" />
       <extension name="coverage">
@@ -139,22 +159,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BodyStructureTest.buildComplex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bodystructurebuilder" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kr.co.manty.mail.imap.envelope.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap.bodystructure" />
-      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.bodystructure.BodyStructureTest" />
-      <option name="METHOD_NAME" value="buildComplex" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BodyStructureTest.buildMultipartReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bodystructurebuilder" />
       <extension name="coverage">
@@ -166,6 +170,22 @@
       <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap.bodystructure" />
       <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.bodystructure.BodyStructureTest" />
       <option name="METHOD_NAME" value="buildMultipartReport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BodyStructureTest.testMultipartMixedMime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bodystructurebuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.co.manty.mail.imap.bodystructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kr.co.manty.mail.imap.bodystructure" />
+      <option name="MAIN_CLASS_NAME" value="kr.co.manty.mail.imap.bodystructure.BodyStructureTest" />
+      <option name="METHOD_NAME" value="testMultipartMixedMime" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BodyStructureTest.testMultipartReport" />
         <item itemvalue="JUnit.BodyStructureTest" />
+        <item itemvalue="JUnit.BodyStructureTest.testMultipartMixedMime" />
+        <item itemvalue="JUnit.BodyStructureTest.testMultipartReport" />
         <item itemvalue="JUnit.BodyStructureTest.buildMultipartReport" />
         <item itemvalue="JUnit.BodyStructureTest.build" />
-        <item itemvalue="JUnit.BodyStructureTest.buildComplex" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +228,14 @@
         </serviceView>
       </list>
     </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -230,6 +258,7 @@
       <workItem from="1577691111761" duration="1000" />
       <workItem from="1582878637354" duration="279000" />
       <workItem from="1635497705414" duration="1235000" />
+      <workItem from="1763910163218" duration="1099000" />
     </task>
     <servers />
   </component>
@@ -246,7 +275,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bodystructurebuilder$BodyStructureTest_build.ic" NAME="BodyStructureTest.build Coverage Results" MODIFIED="1574733319580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
