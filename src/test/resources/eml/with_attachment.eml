@@ -1,0 +1,37 @@
+Date: Mon, 15 Jan 2024 10:30:00 +0900
+From: sender@example.com
+To: recipient@example.com
+Subject: Email with Attachment
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Part_Attachment_12345"
+
+------=_Part_Attachment_12345
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+This is a message with an attachment.
+
+Please find the attached file.
+
+Best regards,
+Sender
+
+------=_Part_Attachment_12345
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="document.pdf"
+
+JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PC9QYWdlcyAyIDAgUgovVHlwZSAvQ2F0YWxvZz4+CmVu
+ZG9iagoKMiAwIG9iago8PC9LaWRzIFszIDAgUl0KL0NvdW50IDEKL1R5cGUgL1BhZ2VzPj4KZW5k
+b2JqCgozIDAgb2JqCjw8L01lZGlhQm94IFswIDAgNjEyIDc5Ml0KL1BhcmVudCAyIDAgUgovUmVz
+b3VyY2VzIDw8L0ZvbnQgPDwvRjEgNCAwIFI+Pj4+Ci9Db250ZW50cyA1IDAgUgovVHlwZSAvUGFn
+ZT4+CmVuZG9iagoKNCAwIG9iago8PC9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovTmFtZSAv
+RjEKL0Jhc2VGb250IC9IZWx2ZXRpY2E+PgplbmRvYmoKCjUgMCBvYmoKPDwvTGVuZ3RoIDQ0Pj4K
+c3RyZWFtCkJUCi9GMSAxMiBUZgoxMDAgNzAwIFRkCihIZWxsbyBXb3JsZCkgVGoKRVQKZW5kc3Ry
+ZWFtCmVuZG9iagoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAw
+IG4gCjAwMDAwMDAwNTQgMDAwMDAgbiAKMDAwMDAwMDEwMiAwMDAwMCBuIAowMDAwMDAwMTY3IDAw
+MDAwIG4gCjAwMDAwMDAyNzMgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDYKL1Jvb3QgMSAwIFI+
+PgpzdGFydHhyZWYKMzY5CiUlRU9GCg==
+
+------=_Part_Attachment_12345--
+

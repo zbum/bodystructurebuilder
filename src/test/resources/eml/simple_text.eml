@@ -1,0 +1,14 @@
+Date: Mon, 15 Jan 2024 10:30:00 +0900
+From: sender@example.com
+To: recipient@example.com
+Subject: Simple Text Email
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+This is a simple plain text email message.
+It contains only text content without any HTML formatting.
+
+Best regards,
+Sender
+
