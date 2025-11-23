@@ -129,6 +129,8 @@ src/main/java/kr/co/manty/mail/imap/bodystructure/
 
 ## 라이선스
 
-[라이선스 정보를 여기에 추가하세요]
+이 프로젝트는 Apache License 2.0에 따라 라이선스됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+
+Copyright 2024 Manty Co., Ltd.
 
 
